@@ -1,10 +1,13 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, watchEffect } from 'vue'
+import { useRoute } from 'vue-router'
 import { locale } from '../i18n.js'
+
+const route = useRoute()
 
 const pageContent = {
   tr: {
-    kicker: 'Çözümlerimiz',
+    kicker: 'ÇÖZÜMLERİMİZ',
     title: 'AKILLI KENTLER VE SÜRDÜRÜLEBİLİR ŞEHİRCİLİK',
     description:
       'Yada Global olarak; makro ölçekli kentsel stratejilerden mikro ölçekli kentsel tasarıma kadar modern şehirciliğin her aşamasında veri odaklı çözümler sunuyoruz. Yasal mevzuatlara tam uyumlu imar planlama, koruma amaçlı imar planları ve bölge planlarındaki köklü uzmanlığımızı; Birleşmiş Milletler Sürdürülebilir Kalkınma Amaçları (SKA) ve Avrupa Yeşil Mutabakatı normlarıyla entegre ediyoruz. Kentlerin geleceğini iklim, çevre ve sıfır karbon odaklı eylemlerle tasarlarken; 3D Dijital İkiz teknolojileri, akıllı kent ağları ve Sürdürülebilir Kentsel Hareketlilik Planı (SUMP) altyapılarıyla dirençli, yaşanabilir ve akıllı kentsel ekosistemler inşa ediyoruz.',
@@ -193,6 +196,12 @@ const activeTab = ref('planning')
 const localizedContent = computed(() => pageContent[locale.value] ?? pageContent.en)
 const tabs = computed(() => localizedContent.value.tabs)
 const currentTab = computed(() => tabs.value.find((tab) => tab.key === activeTab.value) ?? tabs.value[0])
+
+// Auto-select tab when navigating from search
+watchEffect(() => {
+  const t = route.query.tab
+  if (t && tabs.value.some((tab) => tab.key === t)) activeTab.value = t
+})
 
 const isActive = (key) => activeTab.value === key
 const selectTab = (key) => {

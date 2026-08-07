@@ -1,94 +1,97 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, watchEffect } from 'vue'
+import { useRoute } from 'vue-router'
 import { locale } from '../i18n.js'
+
+const route = useRoute()
 
 const pageContent = {
   tr: {
-    kicker: 'Cozumlerimiz',
-    title: 'ULUSLARARASI PROJELER VE STRATEJIK FINANSMAN',
+    kicker: 'ÇÖZÜMLERİMİZ',
+    title: 'ULUSLARARASI PROJELER VE STRATEJİK FİNANSMAN',
     description:
-      'Yada Global olarak; koklu teknik ve kentsel uzmanligimizi uluslararasi finansman mekanizmalariyla bulusturuyoruz. Horizon Europe, Erasmus+ KA2, LIFE, Interreg, EUREKA ve Digital Europe gibi kuresel hibe programlarindan; World Bank, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France ve GTAI gibi cok tarafli kuruluslarin fonladigi makro olcekli yatirim, ihale ve kredi sureclerine kadar tum asamalarda stratejik cozum ortagiyiz. Birlesmis Milletler Surdurulebilir Kalkinma Amaclari ile uyumlu projelere hem lider danismanlik sagliyor hem de konsorsiyumlara teknoloji ortagi olarak dogrudan dahil oluyoruz.',
+      'Yada Global olarak; köklü teknik ve kentsel uzmanlığımızı uluslararası finansman mekanizmalarıyla buluşturuyoruz. Horizon Europe, Erasmus+ KA2, LIFE, Interreg, EUREKA ve Digital Europe gibi küresel hibe programlarından; World Bank, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France ve GTAI gibi çok taraflı kuruluşların fonladığı makro ölçekli yatırım, ihale ve kredi süreçlerine kadar tüm aşamalarda stratejik çözüm ortağıyız. Birleşmiş Milletler Sürdürülebilir Kalkınma Amaçları ile uyumlu projelere hem lider danışmanlık sağlıyor hem de konsorsiyumlara teknoloji ortağı olarak doğrudan dahil oluyoruz.',
     tabs: [
       {
         key: 'eu-projects',
-        label: '🇪🇺 Avrupa Birligi Projeleri ve Konsorsiyum Yonetimi',
+        label: '🇪🇺 Avrupa Birliği Projeleri ve Konsorsiyum Yönetimi',
         intro:
-          'Yada Global; cok uluslu Ar-Ge, inovasyon, yesil donusum, mesleki mukemmeliyet ve akilli sehircilik odakli Avrupa Birligi projeleri sureclerinde stratejik danisman ve resmi konsorsiyum ortagi olarak yer almaktadir. Horizon Europe, DUT, CoVE, Erasmus+ KA2, LIFE ve Digital Europe kapsaminda basvuru stratejilerinden yurutuucu ortak rollerine ve nihai raporlama sureclerine kadar tum donguyu uctan uca yonetiyoruz.',
+          'Yada Global; çok uluslu Ar-Ge, inovasyon, yeşil dönüşüm, mesleki mükemmeliyet ve akıllı şehircilik odaklı Avrupa Birliği projeleri süreçlerinde stratejik danışman ve resmi konsorsiyum ortağı olarak yer almaktadir. Horizon Europe, DUT, CoVE, Erasmus+ KA2, LIFE ve Digital Europe kapsamında başvuru stratejilerinden yürütücü ortak rollerine ve nihai raporlama süreçlerine kadar tüm döngüyü uçtan uca yönetiyoruz.',
         iconCards: [
-          { icon: '🤝', title: 'Konsorsiyum Yapilandirma', text: 'Sinir otesi ortaklik kurulumunda stratejik liderlik.' },
-          { icon: '🎓', title: 'Erasmus+ KA2 Surecleri', text: 'Idari, lojistik ve mali koordinasyonda tam uyum.' },
-          { icon: '💻', title: 'Dijital Is Paketleri', text: 'LMS, uygulama ve oyunlastirma ciktilarinda teknik sahiplik.' }
+          { icon: '🤝', title: 'Konsorsiyum Yapılandırma', text: 'Sınır ötesi ortaklık kurulumunda stratejik liderlik.' },
+          { icon: '🎓', title: 'Erasmus+ KA2 Süreçleri', text: 'İdari, lojistik ve mali koordinasyonda tam uyum.' },
+          { icon: '💻', title: 'Dijital İş Paketleri', text: 'LMS, uygulama ve oyunlaştırma çıktılarında teknik sahiplik.' }
         ],
         blocks: [
           {
-            title: '🤝 Uluslararasi Konsorsiyum Yonetimi ve AB Hibe Surecleri Danismanligi',
-            text: 'Avrupa Komisyonu ve iliskili fon otoriteleri tarafindan yayimlanan cok uluslu cagrilari yakindan takip ederek kurumunuza en uygun fonlama stratejilerini kurguluyoruz. Consortium Building yetkinligimizle Horizon Europe, DUT, CoVE, LIFE ve Eurostars projeleri icin sinir otesi konsorsiyumlar olusturuyor; cagrı analizi, basvuru stratejisi, idari-mali danismanlik ve nihai raporlama asamalarini AB standartlarinda yonetiyoruz.',
+            title: '🤝 Uluslararası Konsorsiyum Yönetimi ve AB Hibe Süreçleri Danışmanlığı',
+            text: 'Avrupa Komisyonu ve ilişkili fon otoriteleri tarafından yayımlanan çok uluslu çağrıları yakından takip ederek kurumunuza en uygun fonlama stratejilerini kurguluyoruz. Consortium Building yetkinliğimizle Horizon Europe, DUT, CoVE, LIFE ve Eurostars projeleri için sınır ötesi konsorsiyumlar oluşturuyor; çağrı analizi, başvuru stratejisi, idari-mali danışmanlık ve nihai raporlama aşamalarını AB standartlarında yönetiyoruz.',
             visual: 'AB Konsorsiyum'
           },
           {
-            title: '🎓 Erasmus+ KA2 Stratejik Ortakliklar ve Proje Surec Yonetimi',
-            text: 'Egitim, genclik, kentsel farkindalik ve kurumsal kapasite gelistirme alanlarinda uluslararasi isbirliklerini tetikleyen Erasmus+ KA2 stratejik ortaklik projelerinde kurumlarin dogru konsorsiyumlara dahil olmasi ve sureclerin koordinasyonu icin danismanlik sunuyoruz. Uluslararasi ortaklik toplantilari ve LTT faaliyetlerinin lojistik, idari ve teknik planlamasini Avrupa Komisyonu normlarina uyumlu sekilde yonetiyoruz.',
+            title: '🎓 Erasmus+ KA2 Stratejik Ortaklıklar ve Proje Süreç Yönetimi',
+            text: 'Eğitim, gençlik, kentsel farkındalık ve kurumsal kapasite geliştirme alanlarında uluslararası işbirliklerini tetikleyen Erasmus+ KA2 stratejik ortaklık projelerinde kurumların doğru konsorsiyumlara dahil olması ve süreçlerin koordinasyonu için danışmanlık sunuyoruz. Uluslararası ortaklık toplantıları ve LTT faaliyetlerinin lojistik, idari ve teknik planlamasını Avrupa Komisyonu normlarına uyumlu şekilde yönetiyoruz.',
             visual: 'Erasmus+ KA2'
           },
           {
-            title: '💻 Dijital Is Paketi Liderligi, Uygulama Gelistirme ve Oyunlastirma',
-            text: 'Dahil oldugumuz AB projelerinde yalnizca surec danismanligi degil, resmi proje ortagi olarak dogrudan teknik cikti sorumlulugu ustleniyoruz. Yayginlastirma stratejilerine uygun web platformlari kuruyor; Erasmus+ ve CoVE projeleri icin cok dilli, SCORM uyumlu LMS altyapilari gelistiriyoruz. Senaryo tabanli oyunlastirma kurgulari ve projeye ozel mobil/web uygulama gelistirme faaliyetleriyle dijital is paketlerini uretiyoruz.',
-            visual: 'Dijital Is Paketleri'
+            title: '💻 Dijital İş Paketi Liderliği, Uygulama Geliştirme ve Oyunlaştırma',
+            text: 'Dahil olduğumuz AB projelerinde yalnızca süreç danışmanlığı değil, resmi proje ortağı olarak doğrudan teknik çıktı sorumluluğu üstleniyoruz. Yaygınlaştırma stratejilerine uygun web platformları kuruyor; Erasmus+ ve CoVE projeleri için çok dilli, SCORM uyumlu LMS altyapıları geliştiriyoruz. Senaryo tabanlı oyunlaştırma kurguları ve projeye özel mobil/web uygulama geliştirme faaliyetleriyle dijital iş paketlerini üretiyoruz.',
+            visual: 'Dijital İş Paketleri'
           }
         ]
       },
       {
         key: 'bid-management',
-        label: '💼 Uluslararasi Fonlu Ihaleler ve Stratejik Teklif Yonetimi',
+        label: '💼 Uluslararası Fonlu İhaleler ve Stratejik Teklif Yönetimi',
         intro:
-          'Yada Global; cok tarafli kalkinma bankalari ve kuresel ajanslar tarafindan finanse edilen uluslararasi teknik yardim ve hizmet alim ihalelerinde uctan uca stratejik danismanlik sunmaktadir. World Bank, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France ve GTAI regulasyonlarina uygun teknik-idari sartname analizleri ile uluslararasi standartlarda bid management surecleri yonetiyoruz.',
+          'Yada Global; çok taraflı kalkınma bankaları ve küresel ajanslar tarafından finanse edilen uluslararası teknik yardım ve hizmet alım ihalelerinde uçtan uca stratejik danışmanlık sunmaktadır. World Bank, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France ve GTAI düzenlemelerine uygun teknik-idari şartname analizleri ile uluslararası standartlarda bid management süreçleri yönetiyoruz.',
         iconCards: [
-          { icon: '📑', title: 'Sartname Analizi', text: 'Teknik-idari gereksinimlerde derin risk ve uyum okumalari.' },
-          { icon: '🌍', title: 'Kuresel Ihale Uyumu', text: 'Cok tarafli kurulus prosedurlerine uygun ihale koordinasyonu.' },
-          { icon: '✍️', title: 'Teklif Dokumantasyonu', text: 'Degerlendirme kriterlerine uygun teknik ve mali dosyalama.' }
+          { icon: '📑', title: 'Şartname Analizi', text: 'Teknik-idari gereksinimlerde derin risk ve uyum okumaları.' },
+          { icon: '🌍', title: 'Küresel İhale Uyumu', text: 'Çok taraflı kuruluş prosedürlerine uygun ihale koordinasyonu.' },
+          { icon: '✍️', title: 'Teklif Dokümantasyonu', text: 'Değerlendirme kriterlerine uygun teknik ve mali dosyalama.' }
         ],
         blocks: [
           {
-            title: '📑 Teknik Sartname Analizleri ve Teklif Stratejisi',
-            text: 'Uluslararasi kuruluslarin yayimladigi cok uluslu ihale dosyalarini, idari ve teknik sartnameleri derinlemesine analiz ediyoruz. Kurumunuzun kuresel pazardaki ihale sureclerine uyumunu guclendirmek icin risk analizleri, maliyet projeksiyonlari, yerel mevzuat uyumluluk denetimleri ve joint venture modellerini iceren teknik ve finansal teklif stratejileri gelistiriyoruz.',
+            title: '📑 Teknik Şartname Analizleri ve Teklif Stratejisi',
+            text: 'Uluslararası kuruluşların yayımladığı çok uluslu ihale dosyalarını, idari ve teknik şartnameleri derinlemesine analiz ediyoruz. Kurumunuzun küresel pazardaki ihale süreçlerine uyumunu güçlendirmek için risk analizleri, maliyet projeksiyonları, yerel mevzuat uyumluluk denetimleri ve joint venture modellerini içeren teknik ve finansal teklif stratejileri geliştiriyoruz.',
             visual: 'Bid Strategy'
           },
           {
-            title: '🌍 Cok Tarafli Kalkinma Bankalari ve Kuresel Ajanslarin Ihale Yonetimi',
-            text: 'World Bank, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France ve GTAI gibi kuruluslarin procurement prosedurlerine tam uyumlu surec yonetimi sagliyoruz. Akilli sehirler, CBS, surdurulebilir ulasim ve dijital donusum odakli ihaleleri izleyerek firmalarin ve konsorsiyumlarin uluslararasi alimlara eksiksiz dosyalar sunmasini koordine ediyoruz.',
-            visual: 'Kuresel Ihale'
+            title: '🌍 Çok Taraflı Kalkınma Bankaları ve Küresel Ajansların İhale Yönetimi',
+            text: 'World Bank, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France ve GTAI gibi kuruluşların procurement prosedürlerine tam uyumlu süreç yönetimi sağlıyoruz. Akıllı şehirler, CBS, sürdürülebilir ulaşım ve dijital dönüşüm odaklı ihaleleri izleyerek firmaların ve konsorsiyumların uluslararası alımlara eksiksiz dosyalar sunmasını koordine ediyoruz.',
+            visual: 'Küresel İhale'
           },
           {
-            title: '✍️ Teknik Teklif Gelistirme ve Uluslararasi Dokumantasyon Yonetimi',
-            text: 'Uluslararasi ihale metodolojilerine uygun technical proposal ve is plani metinleri gelistiriyoruz. Teknik uzman ozgecmislerinin duzenlenmesi, kurumsal referanslarin uluslararasi formatlara uyarlanmasi, mali teklif sablonlarinin optimizasyonu ve evaluation criteria ile tam uyumlu dokumantasyon setlerinin hazirlanmasi sureclerini titizlikle yurutuuyoruz.',
-            visual: 'Teklif Dokumani'
+            title: '✍️ Teknik Teklif Geliştirme ve Uluslararası Dokümantasyon Yönetimi',
+            text: 'Uluslararası ihale metodolojilerine uygun technical proposal ve iş planı metinleri geliştiriyoruz. Teknik uzman özgeçmişlerinin düzenlenmesi, kurumsal referansların uluslararası formatlara uyarlanması, mali teklif şablonlarının optimizasyonu ve evaluation criteria ile tam uyumlu dokümantasyon setlerinin hazırlanması süreçlerini titizlikle yürütüyoruz.',
+            visual: 'Teklif Dokümanı'
           }
         ]
       },
       {
         key: 'finance',
-        label: '📈 Uluslararasi Kredi, Finansman ve Yatirim Danismanligi',
+        label: '📈 Uluslararası Kredi, Finansman ve Yatırım Danışmanlığı',
         intro:
-          'Yada Global; makro olcekli akilli sehir, altyapi, bolgesel kalkinma ve yesil donusum yatirimlari icin uluslararasi finans kuruluslarindan uzun vadeli kredi ve fon saglama sureclerini yonetmektedir. Cok uluslu bankalarin ve kalkinma ajanslarinin normlarina uygun ticari ve teknik fizibilite raporlari, finansal modellemeler ve yesil finansman stratejileriyle buyuk olcekli yatirimlari uluslararasi fonlara hazir hale getiriyoruz.',
+          'Yada Global; makro ölçekli akıllı şehir, altyapı, bölgesel kalkınma ve yeşil dönüşüm yatırımları için uluslararası finans kuruluşlarından uzun vadeli kredi ve fon sağlama süreçlerini yönetmektedir. Çok uluslu bankaların ve kalkınma ajanslarının normlarına uygun ticari ve teknik fizibilite raporları, finansal modellemeler ve yeşil finansman stratejileriyle büyük ölçekli yatırımları uluslararası fonlara hazır hale getiriyoruz.',
         iconCards: [
-          { icon: '🏦', title: 'Uzun Vadeli Kredi', text: 'Sovereign/non-sovereign finansman kurgularinda surec yonetimi.' },
-          { icon: '📋', title: 'Fizibilite ve Modelleme', text: 'ROI, NPV, IRR bazli finansal karar destek modelleri.' },
-          { icon: '🍃', title: 'Yesil Finansman', text: 'ESG uyumlu yatirim ve fon erisim stratejileri.' }
+          { icon: '🏦', title: 'Uzun Vadeli Kredi', text: 'Sovereign/non-sovereign finansman kurgularında süreç yönetimi.' },
+          { icon: '📋', title: 'Fizibilite ve Modelleme', text: 'ROI, NPV, IRR bazlı finansal karar destek modelleri.' },
+          { icon: '🍃', title: 'Yeşil Finansman', text: 'ESG uyumlu yatırım ve fon erişim stratejileri.' }
         ],
         blocks: [
           {
-            title: '🏦 Makro Proje Finansmani ve Uluslararasi Uzun Vadeli Kredi Yonetimi',
-            text: 'Belediyelerin, OSBlerin ve ozel sektor yatirimcilarinin buyuk olcekli altyapi, akilli kent ve dijital donusum projeleri icin cok tarafli kalkinma bankalarindan uzun vadeli kredi saglama sureclerine danismanlik yapiyoruz. Finansman kuruluslarinin katı basvuru prosedurlerine uyumlu borclanma stratejileri kurguluyor ve fonlama oncesi kurumsal risk analizleri gerceklestiriyoruz.',
-            visual: 'Proje Finansmani'
+            title: '🏦 Makro Proje Finansmanı ve Uluslararası Uzun Vadeli Kredi Yönetimi',
+            text: 'Belediyelerin, OSBlerin ve özel sektör yatırımcılarının büyük ölçekli altyapı, akıllı kent ve dijital dönüşüm projeleri için çok taraflı kalkınma bankalarından uzun vadeli kredi sağlama süreçlerine danışmanlık yapıyoruz. Finansman kuruluşlarının katı başvuru prosedürlerine uyumlu borçlanma stratejileri kurguluyor ve fonlama öncesi kurumsal risk analizleri gerçekleştiriyoruz.',
+            visual: 'Proje Finansmanı'
           },
           {
-            title: '📋 Ticari, Teknik Fizibilite Raporlari ve Finansal Modelleme',
-            text: 'Uluslararasi finans kuruluslarinin ve bolgesel kalkinma ajanslarinin kabul standartlarina uyumlu ticari ve teknik fizibilite raporlari hazirliyoruz. Yatirimlarin geri donus surelerini, net bugunku degerlerini ve ic verimlilik oranlarini hesaplayan dinamik finansal modelleme ve risk analizi tablolarıyla projelerin finansal surdurulebilirligini belgeliyoruz.',
+            title: '📋 Ticari, Teknik Fizibilite Raporları ve Finansal Modelleme',
+            text: 'Uluslararası finans kuruluşlarının ve bölgesel kalkınma ajanslarının kabul standartlarına uyumlu ticari ve teknik fizibilite raporları hazırlıyoruz. Yatırımların geri dönüş sürelerini, net bugünkü değerlerini ve iç verimlilik oranlarını hesaplayan dinamik finansal modelleme ve risk analizi tablolarıyla projelerin finansal sürdürülebilirliğini belgeliyoruz.',
             visual: 'Finansal Model'
           },
           {
-            title: '🍃 Yesil Finansman, Surdurulebilirlik Yonetimi ve Yatirim Rehberligi',
-            text: 'Avrupa Yesil Mutabakati normlariyla eslesen yatirimlar icin green finance, green bonds ve surdurulebilirlik odakli fon mekanizmalarina erisim stratejileri gelistiriyoruz. Yatirimcilarin iklim ve cevre regulasyonlarina uyumunu koordine ederek ESG kriterlerine uygun yatirim rehberligi sunuyoruz.',
+            title: '🍃 Yeşil Finansman, Sürdürülebilirlik Yönetimi ve Yatırım Rehberliği',
+            text: 'Avrupa Yeşil Mutabakatı normlarıyla eşleşen yatırımlar için green finance, green bonds ve sürdürülebilirlik odaklı fon mekanizmalarına erişim stratejileri geliştiriyoruz. Yatırımcıların iklim ve çevre düzenlemelerine uyumunu koordine ederek ESG kriterlerine uygun yatırım rehberliği sunuyoruz.',
             visual: 'Green Finance'
           }
         ]
@@ -193,6 +196,12 @@ const activeTab = ref('eu-projects')
 const localizedContent = computed(() => pageContent[locale.value] ?? pageContent.en)
 const tabs = computed(() => localizedContent.value.tabs)
 const currentTab = computed(() => tabs.value.find((tab) => tab.key === activeTab.value) ?? tabs.value[0])
+
+// Auto-select tab when navigating from search
+watchEffect(() => {
+  const t = route.query.tab
+  if (t && tabs.value.some((tab) => tab.key === t)) activeTab.value = t
+})
 
 const isActive = (key) => activeTab.value === key
 const selectTab = (key) => {

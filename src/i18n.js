@@ -368,7 +368,7 @@ const messages = {
     hero: {
       card1: ['DİJİTAL TEKNOLOJİLER', 'VE', 'YAZILIM ÇÖZÜMLERİ'],
       card2: ['AKILLI KENTLER', 'VE', 'SÜRDÜRÜLEBİLİR ŞEHİRCİLİK'],
-      card3: ['Uluslararası Projeler', 've', 'STRATEJİK FİNANSMAN']
+      card3: ['ULUSLARARASI PROJELER', 'VE', 'STRATEJİK FİNANSMAN']
     },
     approachPage: {
       heading: 'Yaklaşımımız',

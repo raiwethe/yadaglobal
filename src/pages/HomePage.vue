@@ -15,7 +15,7 @@ const heroCards = [
     titleKeys: ['hero.card1.0', 'hero.card1.1', 'hero.card1.2'],
     image: 'https://sampas.com.tr/uploads/2023/10/dijital-ikiz.jpg.webp',
     link: '/digital-teknolojiler-ve-yazilim-cozumleri'
-  },
+  },  
   {
     titleKeys: ['hero.card2.0', 'hero.card2.1', 'hero.card2.2'],
     image: 'https://sampas.com.tr/uploads/2026/01/deprem.jpg.webp',

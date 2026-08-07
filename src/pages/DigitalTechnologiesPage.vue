@@ -1,119 +1,122 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, watchEffect } from 'vue'
+import { useRoute } from 'vue-router'
 import { locale } from '../i18n.js'
+
+const route = useRoute()
 
 const pageContent = {
   tr: {
-    kicker: 'Cozumlerimiz',
-    title: 'DIJITAL TEKNOLOJILER VE YAZILIM COZUMLERI',
+    kicker: 'ÇÖZÜMLERİMİZ',
+    title: 'DİJİTAL TEKNOLOJİLER VE YAZILIM ÇÖZÜMLERİ',
     description:
-      'Cografi veri zekasi, yapay zeka muhendisligi ve siber guvenlik denetimini tek bir stratejik catida birlestirerek kurumlara olceklenebilir dijital donusum altyapisi sunuyoruz.',
+      'Coğrafi veri zekası, yapay zeka mühendisliği ve siber güvenlik denetimini tek bir stratejik çatıda birleştirerek kurumlara ölçeklenebilir dijital dönüşüm altyapısı sunuyoruz.',
     tabs: [
       {
         key: 'gis',
-        label: '🛰️ Cografi Bilgi Sistemleri ve Mekansal Veri Analitigi',
+        label: '🛰️ Coğrafi Bilgi Sistemleri ve Mekansal Veri Analitiği',
         intro:
-          'Yada Global; Cografi Bilgi Sistemleri (CBS) ve Uzaktan Algilama teknolojilerinde uctan uca cozumler sunan lider bir teknoloji firmasidir. Buyuk mekansal verileri ileri duzey analitik yontemlerle isleyerek; kamu politikalarini yonlendiren akilli kentsel modeller ve ozel sektor yatirimlarina yon veren lokasyon analitigi cozumleri uretiyoruz.',
+          'Yada Global; Coğrafi Bilgi Sistemleri (CBS) ve Uzaktan Algılama teknolojilerinde uçtan uca çözümler sunan lider bir teknoloji firmasıdır. Büyük mekansal verileri ileri düzey analitik yöntemlerle işleyerek; kamu politikalarını yönlendiren akıllı kentsel modeller ve özel sektör yatırımlarına yön veren lokasyon analitiği çözümleri üretiyoruz.',
         iconCards: [
-          { icon: '🗺️', title: 'Mekansal Karar Destegi', text: 'Veriyi karar mekanizmalarina tasiyan GIS analitik akislari.' },
-          { icon: '🛰️', title: 'Uzaktan Algilama', text: 'Uydu ve radar verisinden zaman serisi tabanli icgoruler.' },
-          { icon: '📍', title: 'Lokasyon Zekasi', text: 'Yatirim, operasyon ve buyume kararlari icin konumsal modelleme.' }
+          { icon: '🗺️', title: 'Mekansal Karar Desteği', text: 'Veriyi karar mekanizmalarına taşıyan GIS analitik akışları.' },
+          { icon: '🛰️', title: 'Uzaktan Algılama', text: 'Uydu ve radar verisinden zaman serisi tabanlı içgörüler.' },
+          { icon: '📍', title: 'Lokasyon Zekası', text: 'Yatırım, operasyon ve büyüme kararları için konumsal modelleme.' }
         ],
         blocks: [
           {
-            title: 'Mekansal Veri Analitigi, Modelleme ve CBS Cozumleri',
-            text: 'Kamu kurumlari ve yerel yonetimlerin ham mekansal verilerini gelismis algoritmalara dayali GIS analizi yontemleriyle isliyoruz. Kentsel buyume projeksiyonlari, afet risk senaryolari, lojistik ag optimizasyonlari ve mekansal veri tabani tasarimlari ile gelecege yonelik surdurulebilir tahmin modelleri uretiyoruz.',
+            title: 'Mekansal Veri Analitiği, Modelleme ve CBS Çözümleri',
+            text: 'Kamu kurumları ve yerel yönetimlerin ham mekansal verilerini gelişmiş algoritmalara dayalı GIS analizi yöntemleriyle işliyoruz. Kentsel büyüme projeksiyonları, afet risk senaryoları, lojistik ağ optimizasyonları ve mekansal veri tabanı tasarımları ile geleceğe yönelik sürdürülebilir tahmin modelleri üretiyoruz.',
             visual: 'Mekansal Zeka'
           },
           {
-            title: 'Uzaktan Algilama ve Uydu Goruntusu Analizi',
-            text: 'Yuksek cozunurluklu uydu ve radar goruntuleri uzerinden uzaktan algilama teknolojileriyle zaman serisi analizleri gerceklestiriyoruz. Arazi kullanimi degisiklikleri, cevre kirliligi izleme, kentsel isi adasi haritalama ile endustriyel tarimda bitki sagligi takibi ve rekolte tahmin modelleri gelistiriyoruz.',
-            visual: 'Uzaktan Algilama'
+            title: 'Uzaktan Algılama ve Uydu Görüntüsü Analizi',
+            text: 'Yüksek çözünürlüklü uydu ve radar görüntüleri üzerinden uzaktan algılama teknolojileriyle zaman serisi analizleri gerçekleştiriyoruz. Arazi kullanımı değişiklikleri, çevre kirliliği izleme, kentsel ısı adası haritalama ile endüstriyel tarımda bitki sağlığı takibi ve rekolte tahmin modelleri geliştiriyoruz.',
+            visual: 'Uzaktan Algılama'
           },
           {
-            title: 'Ozel Sektor Icin Lokasyon Analitigi ve Ticari Is Zekasi',
-            text: 'Perakende, lojistik, enerji ve finans sektorlerindeki kuresel ve yerel markalar icin konum tabanli deger onerileri kurguluyoruz. Nufus yogunlugu, demografik yapi, erisilebilirlik ve rakip analizi verilerini harita uzerinde cakistirarak yer secimi sureclerini bilimsel olarak yonetiyoruz.',
-            visual: 'Lokasyon Analitigi'
+            title: 'Özel Sektör İçin Lokasyon Analitiği ve Ticari İş Zekası',
+            text: 'Perakende, lojistik, enerji ve finans sektörlerindeki küresel ve yerel markalar için konum tabanlı değer önerileri kurguluyoruz. Nüfus yoğunluğu, demografik yapı, erişilebilirlik ve rakip analizi verilerini harita üzerinde çakıştırarak yer seçimi süreçlerini bilimsel olarak yönetiyoruz.',
+            visual: 'Lokasyon Analitiği'
           },
           {
-            title: 'Yatirim Arazi Secimi ve Mekansal Risk Yonetimi',
-            text: 'GES/RES ve buyuk olcekli endustriyel tesis yatirimlari oncesinde CBS tabanli fizibilite raporlari hazirliyoruz. Arazinin egim, baki, trafo hatlarina yakinlik ve yasal sinir analizlerini yaparken; tasqin, sel ve deprem risk analitigi sunuyoruz.',
+            title: 'Yatırım Arazi Seçimi ve Mekansal Risk Yönetimi',
+            text: 'GES/RES ve büyük ölçekli endüstriyel tesis yatırımları öncesinde CBS tabanlı fizibilite raporları hazırlıyoruz. Arazinin eğim, bakı, trafo hatlarına yakınlık ve yasal sınır analizlerini yaparken; taşkın, sel ve deprem risk analitiği sunuyoruz.',
             visual: 'Risk Haritalama'
           },
           {
-            title: 'Web-GIS Tabanli Yonetim Portallari ve Sistem Entegrasyonu',
-            text: 'Kamu ve ozel sektor kuruluslarinin cografi veri tabanlarini merkezi yapida topluyoruz. Tarayici tabanli harita yonetimi, sorgulama ve dinamik gorsellestirme icin olceklenebilir Web-GIS portallari ve bulut altyapilari kurguluyoruz.',
+            title: 'Web-GIS Tabanlı Yönetim Portalları ve Sistem Entegrasyonu',
+            text: 'Kamu ve özel sektör kuruluşlarının coğrafi veri tabanlarını merkezi yapıda topluyoruz. Tarayıcı tabanlı harita yönetimi, sorgulama ve dinamik görselleştirme için ölçeklenebilir Web-GIS portalları ve bulut altyapıları kurguluyoruz.',
             visual: 'Web GIS'
           },
           {
-            title: 'Buyuk Mekansal Veri Isleme ve IoT Haritalama',
-            text: 'Akilli sehir donanimlari, saha sensorleri ve mobil uygulamalardan akan buyuk mekansal veri akislarini tek bir merkeze entegre ediyoruz. Gercek zamanli lokasyon verilerini filtreleyerek dinamik cografi karar destek sistemleri insa ediyoruz.',
-            visual: 'Buyuk Mekansal Veri'
+            title: 'Büyük Mekansal Veri İşleme ve IoT Haritalama',
+            text: 'Akıllı şehir donanımları, saha sensörleri ve mobil uygulamalardan akan büyük mekansal veri akışlarını tek bir merkeze entegre ediyoruz. Gerçek zamanlı lokasyon verilerini filtreleyerek dinamik coğrafi karar destek sistemleri inşa ediyoruz.',
+            visual: 'Büyük Mekansal Veri'
           }
         ]
       },
       {
         key: 'ai',
-        label: '💻 Yazilim Gelistirme ve Yapay Zeka Sistem Muhendisligi',
+        label: '💻 Yazılım Geliştirme ve Yapay Zeka Sistem Mühendisliği',
         intro:
-          'Yada Global; kamu kurumlari ve ozel sektor sirketleri icin olceklenebilir, yuksek performansli ve yapay zeka tabanli yazilim cozumleri sunmaktadir. Buyuk veri yigınlarini ve mekansal zekayi anlamlandirmak uzere; gelismis algoritmalara sahip AI yazilim gelistirme, bulut tabanli platformlar ve akilli karar destek sistemleri insa ediyoruz.',
+          'Yada Global; kamu kurumları ve özel sektör şirketleri için ölçeklenebilir, yüksek performanslı ve yapay zeka tabanlı yazılım çözümleri sunmaktadır. Büyük veri yığınlarını ve mekansal zekayı anlamlandırmak üzere; gelişmiş algoritmalara sahip AI yazılım geliştirme, bulut tabanlı platformlar ve akıllı karar destek sistemleri inşa ediyoruz.',
         iconCards: [
-          { icon: '🤖', title: 'AI Karar Motorlari', text: 'Tahmine dayali analitik ve akilli otomasyon altyapilari.' },
-          { icon: '☁️', title: 'Bulut ve SaaS', text: 'Olceklenebilir, guvenli ve entegre kurumsal platformlar.' },
-          { icon: '📱', title: 'Akilli Uygulamalar', text: 'Mobil ve web kanallarinda gercek zamanli dijital deneyimler.' }
+          { icon: '🤖', title: 'AI Karar Motorları', text: 'Tahmine dayalı analitik ve akıllı otomasyon altyapıları.' },
+          { icon: '☁️', title: 'Bulut ve SaaS', text: 'Ölçeklenebilir, güvenli ve entegre kurumsal platformlar.' },
+          { icon: '📱', title: 'Akıllı Uygulamalar', text: 'Mobil ve web kanallarında gerçek zamanlı dijital deneyimler.' }
         ],
         blocks: [
           {
-            title: 'Yapay Zeka Tabanli Karar Destek Sistemleri ve Veri Gorsellestirme',
-            text: 'Kamu yonetimi, yerel yonetimler ve kurumsal liderler icin tahmine dayali analitik sunan akilli karar destek sistemleri gelistiriyoruz. Operasyonel verileri makine ogrenmesi algoritmalariyla isleyerek, riskleri azaltan ve gelecek senaryolarini ongoren paneller tasarliyoruz.',
+            title: 'Yapay Zeka Tabanlı Karar Destek Sistemleri ve Veri Görselleştirme',
+            text: 'Kamu yönetimi, yerel yönetimler ve kurumsal liderler için tahmine dayalı analitik sunan akıllı karar destek sistemleri geliştiriyoruz. Operasyonel verileri makine öğrenmesi algoritmalarıyla işleyerek, riskleri azaltan ve gelecek senaryolarını öngören paneller tasarlıyoruz.',
             visual: 'AI Panelleri'
           },
           {
-            title: 'AI Entegreli Ozel Kurumsal Yazilim Cozumleri ve SaaS Mimarisi',
-            text: 'Sirketlerin ve kamu organizasyonlarinin geleneksel is akislarini akilli algoritmalarla otomatize eden kurumsal yazilim cozumleri uretiyoruz. LLM ve derin ogrenme entegrasyonlarina sahip bulut tabanli SaaS mimarileriyle dijital donusum sureclerini hizlandiriyoruz.',
+            title: 'AI Entegreli Özel Kurumsal Yazılım Çözümleri ve SaaS Mimarisi',
+            text: 'Şirketlerin ve kamu organizasyonlarının geleneksel iş akışlarını akıllı algoritmalarla otomatize eden kurumsal yazılım çözümleri üretiyoruz. LLM ve derin öğrenme entegrasyonlarına sahip bulut tabanlı SaaS mimarileriyle dijital dönüşüm süreçlerini hızlandırıyoruz.',
             visual: 'Bulut Yerel'
           },
           {
-            title: 'Akilli Kent Cozumleri ve Mobil Uygulama Gelistirme',
-            text: 'Yerel yonetimler, belediyeler ve B2B sirketler icin saha yonetimini, vatandas iletisimini ve veri toplama surecini kolaylastiran mobil uygulamalar gelistiriyoruz. Yapay zeka destekli akilli sehir asistanlari ve lokasyon bazli servisler ile kullanici deneyimini guclendiriyoruz.',
-            visual: 'Mobil Akilli Kent'
+            title: 'Akıllı Kent Çözümleri ve Mobil Uygulama Geliştirme',
+            text: 'Yerel yönetimler, belediyeler ve B2B şirketler için saha yönetimini, vatandaş iletişimini ve veri toplama sürecini kolaylaştıran mobil uygulamalar geliştiriyoruz. Yapay zeka destekli akıllı şehir asistanları ve lokasyon bazlı servisler ile kullanıcı deneyimini güçlendiriyoruz.',
+            visual: 'Mobil Akıllı Kent'
           },
           {
-            title: 'IoT Donanim Entegrasyonlari ve Guvenli API Mimarisi',
-            text: 'Farkli yazilim platformlari, eski veri tabanlari ve IoT donanimlarinin gecikmesiz haberlesmesini saglayan guvenli API kopruleri insa ediyoruz. Sensor verilerini yapay zeka motorlarina tasiyan veri boru hatlarini kuruyor, veri butunlugunu guclu sifreleme protokolleriyle koruyoruz.',
-            visual: 'Guvenli API'
+            title: 'IoT Donanım Entegrasyonları ve Güvenli API Mimarisi',
+            text: 'Farklı yazılım platformları, eski veri tabanları ve IoT donanımlarının gecikmesiz haberleşmesini sağlayan güvenli API köprüleri inşa ediyoruz. Sensör verilerini yapay zeka motorlarına taşıyan veri boru hatlarını kuruyor, veri bütünlüğünü güçlü şifreleme protokolleriyle koruyoruz.',
+            visual: 'Güvenli API'
           }
         ]
       },
       {
         key: 'security',
-        label: '🛡️ Siber Guvenlik Denetimi, Sizma Testleri ve Risk Raporlamasi',
+        label: '🛡️ Siber Güvenlik Denetimi, Sızma Testleri ve Risk Raporlaması',
         intro:
-          'Yada Global; kamu kurumlari, yerel yonetimler ve kurumsal sirketler icin bagimsiz siber guvenlik denetimi ve risk analizi hizmetleri sunmaktadir. Akilli kent altyapilarinda, harita veri tabanlarinda ve dijital sistemlerdeki aciklari tespit etmek uzere gelismis sizma testleri ve uyum raporlamalari gerceklestiriyoruz.',
+          'Yada Global; kamu kurumları, yerel yönetimler ve kurumsal şirketler için bağımsız siber güvenlik denetimi ve risk analizi hizmetleri sunmaktadır. Akıllı kent altyapılarında, harita veri tabanlarında ve dijital sistemlerdeki açıkları tespit etmek üzere gelişmiş sızma testleri ve uyum raporlamaları gerçekleştiriyoruz.',
         iconCards: [
-          { icon: '🛡️', title: 'Kritik Altyapi Guvenligi', text: 'SCADA ve IoT aglarinda butuncul zafiyet taramasi.' },
-          { icon: '🎯', title: 'Pentest ve Red Team', text: 'Ag, uygulama ve API katmanlarinda kontrollu saldiri senaryolari.' },
-          { icon: '📜', title: 'Regulasyon Uyum', text: 'NIS 2, ISO 27001 ve fon uyumluluk raporlama surecleri.' }
+          { icon: '🛡️', title: 'Kritik Altyapı Güvenliği', text: 'SCADA ve IoT ağlarında bütüncül zafiyet taraması.' },
+          { icon: '🎯', title: 'Pentest ve Red Team', text: 'Ağ, uygulama ve API katmanlarında kontrollü saldırı senaryoları.' },
+          { icon: '📜', title: 'Regülasyon Uyum', text: 'NIS 2, ISO 27001 ve fon uyumluluk raporlama süreçleri.' }
         ],
         blocks: [
           {
-            title: 'Akilli Sehir ve Kritik Altyapi Siber Guvenlik Zafiyet Analizi',
-            text: 'Sehirlerin su, enerji, atik su ve aydinlatma sebekelerini yoneten endustriyel kontrol sistemlerindeki guvenlik aciklarini tespit ediyoruz. IoT sensor aglari ve sinyalizasyon donanimlarinin haberlesme protokollerini denetleyerek gerekli guvenlik onlemlerini raporluyoruz.',
-            visual: 'Kritik Altyapi'
+            title: 'Akıllı Şehir ve Kritik Altyapı Siber Güvenlik Zafiyet Analizi',
+            text: 'Şehirlerin su, enerji, atık su ve aydınlatma şebekelerini yöneten endüstriyel kontrol sistemlerindeki güvenlik açıklarını tespit ediyoruz. IoT sensör ağları ve sinyalizasyon donanımlarının haberleşme protokollerini denetleyerek gerekli güvenlik önlemlerini raporluyoruz.',
+            visual: 'Kritik Altyapı'
           },
           {
-            title: 'Mekansal Veri ve Dijital Ikiz Sizma Testleri',
-            text: 'Kadastro, mulkiyet ve altyapi harita veri tabanlarinin siber dayanikliligini denetliyoruz. Web-GIS portallari ve dijital ikiz platformlarinin API, entegrasyon ve yetkilendirme aciklarini tespit ederek teknik bulgulari raporluyoruz.',
-            visual: 'Dijital Ikiz Guvenligi'
+            title: 'Mekansal Veri ve Dijital İkiz Sızma Testleri',
+            text: 'Kadastro, mülkiyet ve altyapı harita veri tabanlarının siber dayanıklılığını denetliyoruz. Web-GIS portalları ve dijital ikiz platformlarının API, entegrasyon ve yetkilendirme açıklarını tespit ederek teknik bulguları raporluyoruz.',
+            visual: 'Dijital İkiz Güvenliği'
           },
           {
-            title: 'Kurumsal Pentest ve Teknik Risk Raporlamasi',
-            text: 'Kurumlarin ic ve dis ag altyapilarinin, bulut sunucularinin ve veri merkezlerinin siber tehditlere karsi direncini olcuyoruz. Kaynak kod analizi ve oltalama simulasyonlariyla insan kaynakli riskleri degerlendirerek oncelikli aksiyon planlari sunuyoruz.',
+            title: 'Kurumsal Pentest ve Teknik Risk Raporlaması',
+            text: 'Kurumların iç ve dış ağ altyapılarının, bulut sunucularının ve veri merkezlerinin siber tehditlere karşı direncini ölçüyoruz. Kaynak kod analizi ve oltalama simülasyonlarıyla insan kaynaklı riskleri değerlendirerek öncelikli aksiyon planları sunuyoruz.',
             visual: 'Pentest Raporlama'
           },
           {
-            title: 'Uluslararasi Siber Regulasyon ve Fon Uyum Danismanligi',
-            text: 'AB siber guvenlik direktifleri ve bilgi guvenligi yonetim standartlarina yonelik gap analizleri ve uyum raporlama sureclerini yonetiyoruz. Uluslararasi finansmanli dijital donusum projelerinde zorunlu teknik siber risk raporlarini hazirliyoruz.',
+            title: 'Uluslararası Siber Regülasyon ve Fon Uyum Danışmanlığı',
+            text: 'AB siber güvenlik direktifleri ve bilgi güvenliği yönetim standartlarına yönelik gap analizleri ve uyum raporlama süreçlerini yönetiyoruz. Uluslararası finansmanlı dijital dönüşüm projelerinde zorunlu teknik siber risk raporlarını hazırlıyoruz.',
             visual: 'Uyum Stratejisi'
           }
         ]
@@ -243,6 +246,12 @@ const activeTab = ref('gis')
 const localizedContent = computed(() => pageContent[locale.value] ?? pageContent.en)
 const tabs = computed(() => localizedContent.value.tabs)
 const currentTab = computed(() => tabs.value.find((tab) => tab.key === activeTab.value) ?? tabs.value[0])
+
+// Auto-select tab when navigating from search
+watchEffect(() => {
+  const t = route.query.tab
+  if (t && tabs.value.some((tab) => tab.key === t)) activeTab.value = t
+})
 
 const isActive = (key) => activeTab.value === key
 const selectTab = (key) => {

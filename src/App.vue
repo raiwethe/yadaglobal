@@ -12,51 +12,62 @@ const searchDropdownRef = ref(null)
 
 const currentLang = computed(() => locale.value.toUpperCase())
 
+// Normalize Turkish special chars + lowercase for accent-insensitive search
+const normalize = (str) =>
+  str
+    .toLowerCase()
+    .replace(/[ıİ]/g, 'i')
+    .replace(/[çÇ]/g, 'c')
+    .replace(/[ğĞ]/g, 'g')
+    .replace(/[öÖ]/g, 'o')
+    .replace(/[şŞ]/g, 's')
+    .replace(/[üÜ]/g, 'u')
+
 const searchIndex = computed(() => {
   if (locale.value === 'tr') {
     return [
-      { title: 'Hizmetlerimiz', subtitle: 'Hizmet sayfası', to: '/services' },
-      { title: 'İletişim', subtitle: 'İletişim sayfası', to: '/contact' },
-      { title: 'Dijital Teknolojiler ve Yazılım Çözümleri', subtitle: 'Ana hizmet sayfası', to: '/digital-teknolojiler-ve-yazilim-cozumleri' },
-      { title: 'Coğrafi Bilgi Sistemleri ve Mekansal Veri Analitiği', subtitle: 'Dijital Teknolojiler bölümü', to: '/digital-teknolojiler-ve-yazilim-cozumleri' },
-      { title: 'Yazılım Geliştirme ve Yapay Zeka Sistem Mühendisliği', subtitle: 'Dijital Teknolojiler bölümü', to: '/digital-teknolojiler-ve-yazilim-cozumleri' },
-      { title: 'Siber Güvenlik Denetimi, Sızma Testleri ve Risk Raporlaması', subtitle: 'Dijital Teknolojiler bölümü', to: '/digital-teknolojiler-ve-yazilim-cozumleri' },
-      { title: 'Akıllı Kentler ve Sürdürülebilir Şehircilik', subtitle: 'Ana hizmet sayfası', to: '/akilli-kentler-ve-surdurulebilir-sehircilik' },
-      { title: 'Şehir Planlama ve Bölgesel Master Planlar', subtitle: 'Akıllı Kentler bölümü', to: '/akilli-kentler-ve-surdurulebilir-sehircilik' },
-      { title: 'Akıllı Şehirler, OSB’ler ve Endüstriyel Dijital İkiz Çözümleri', subtitle: 'Akıllı Kentler bölümü', to: '/akilli-kentler-ve-surdurulebilir-sehircilik' },
-      { title: 'Sürdürülebilir Şehircilik, Yeşil Dönüşüm ve Çevre Stratejileri', subtitle: 'Akıllı Kentler bölümü', to: '/akilli-kentler-ve-surdurulebilir-sehircilik' },
-      { title: 'Uluslararası Projeler ve Stratejik Finansman', subtitle: 'Ana hizmet sayfası', to: '/uluslararasi-projeler-ve-stratejik-finansman' },
-      { title: 'Avrupa Birliği Projeleri ve Konsorsiyum Yönetimi', subtitle: 'Uluslararası Projeler bölümü', to: '/uluslararasi-projeler-ve-stratejik-finansman' },
-      { title: 'Uluslararası Fonlu İhaleler ve Stratejik Teklif Yönetimi', subtitle: 'Uluslararası Projeler bölümü', to: '/uluslararasi-projeler-ve-stratejik-finansman' },
-      { title: 'Uluslararası Kredi, Finansman ve Yatırım Danışmanlığı', subtitle: 'Uluslararası Projeler bölümü', to: '/uluslararasi-projeler-ve-stratejik-finansman' },
-      { title: 'Kurumsal Politika ve Uyum', subtitle: 'Alt bilgi bölümü', to: '/contact' }
+      { title: 'Hizmetlerimiz', subtitle: 'Hizmet sayfası', to: '/services', keywords: ['hizmet', 'servis'] },
+      { title: 'İletişim', subtitle: 'İletişim sayfası', to: '/contact', keywords: ['telefon', 'adres', 'email', 'faks', 'harita'] },
+      { title: 'Dijital Teknolojiler ve Yazılım Çözümleri', subtitle: 'Ana hizmet sayfası', to: '/digital-teknolojiler-ve-yazilim-cozumleri', keywords: ['dijital', 'yazılım', 'teknoloji'] },
+      { title: 'Coğrafi Bilgi Sistemleri ve Mekansal Veri Analitiği', subtitle: 'Dijital Teknolojiler › CBS / GIS', to: '/digital-teknolojiler-ve-yazilim-cozumleri', tab: 'gis', keywords: ['CBS', 'GIS', 'harita', 'uzaktan algılama', 'uydu', 'lokasyon', 'mekansal', 'coğrafi', 'radar', 'analitik', 'mekânsal'] },
+      { title: 'Yazılım Geliştirme ve Yapay Zeka Sistem Mühendisliği', subtitle: 'Dijital Teknolojiler › Yapay Zeka', to: '/digital-teknolojiler-ve-yazilim-cozumleri', tab: 'ai', keywords: ['yapay zeka', 'AI', 'yazılım', 'SaaS', 'bulut', 'mobil', 'uygulama', 'LLM', 'IoT', 'API', 'makine öğrenmesi'] },
+      { title: 'Siber Güvenlik Denetimi, Sızma Testleri ve Risk Raporlaması', subtitle: 'Dijital Teknolojiler › Siber Güvenlik', to: '/digital-teknolojiler-ve-yazilim-cozumleri', tab: 'security', keywords: ['siber güvenlik', 'pentest', 'sızma testi', 'güvenlik', 'ISO 27001', 'NIS2', 'zafiyet', 'risk', 'red team'] },
+      { title: 'Akıllı Kentler ve Sürdürülebilir Şehircilik', subtitle: 'Ana hizmet sayfası', to: '/akilli-kentler-ve-surdurulebilir-sehircilik', keywords: ['akıllı kent', 'şehircilik', 'kentsel'] },
+      { title: 'Şehir Planlama ve Bölgesel Master Planlar', subtitle: 'Akıllı Kentler › Şehir Planlama', to: '/akilli-kentler-ve-surdurulebilir-sehircilik', tab: 'planning', keywords: ['imar', 'master plan', 'bölge planı', 'kentsel tasarım', 'planlama', 'üst ölçek', 'arazi'] },
+      { title: "Akıllı Şehirler, OSB'ler ve Endüstriyel Dijital İkiz Çözümleri", subtitle: 'Akıllı Kentler › Dijital İkiz / OSB', to: '/akilli-kentler-ve-surdurulebilir-sehircilik', tab: 'digital-twin', keywords: ['OSB', 'dijital ikiz', 'endüstriyel', 'organize sanayi', 'SCADA', 'IoT', 'sensör', 'twin'] },
+      { title: 'Sürdürülebilir Şehircilik, Yeşil Dönüşüm ve Çevre Stratejileri', subtitle: 'Akıllı Kentler › Sürdürülebilirlik', to: '/akilli-kentler-ve-surdurulebilir-sehircilik', tab: 'sustainability', keywords: ['yeşil dönüşüm', 'çevre', 'SUMP', 'iklim', 'karbon', 'ESG', 'sürdürülebilir', 'emisyon'] },
+      { title: 'Uluslararası Projeler ve Stratejik Finansman', subtitle: 'Ana hizmet sayfası', to: '/uluslararasi-projeler-ve-stratejik-finansman', keywords: ['uluslararası', 'proje', 'finansman'] },
+      { title: 'Avrupa Birliği Projeleri ve Konsorsiyum Yönetimi', subtitle: 'Uluslararası Projeler › AB / Horizon', to: '/uluslararasi-projeler-ve-stratejik-finansman', tab: 'eu-projects', keywords: ['AB', 'Avrupa', 'Horizon', 'Erasmus', 'konsorsiyum', 'hibe', 'LIFE', 'Interreg', 'DUT', 'CoVE', 'EUREKA'] },
+      { title: 'Uluslararası Fonlu İhaleler ve Stratejik Teklif Yönetimi', subtitle: 'Uluslararası Projeler › İhale / Teklif', to: '/uluslararasi-projeler-ve-stratejik-finansman', tab: 'bid-management', keywords: ['ihale', 'teklif', 'World Bank', 'UNDP', 'EBRD', 'GIZ', 'ICMPD', 'bid', 'tender', 'procurement'] },
+      { title: 'Uluslararası Kredi, Finansman ve Yatırım Danışmanlığı', subtitle: 'Uluslararası Projeler › Kredi / Yatırım', to: '/uluslararasi-projeler-ve-stratejik-finansman', tab: 'finance', keywords: ['kredi', 'yatırım', 'fizibilite', 'yeşil finansman', 'EIB', 'IsDB', 'NPV', 'IRR', 'ROI', 'green bond', 'ESG'] }
     ]
   }
 
   return [
-    { title: 'Services', subtitle: 'Service hub', to: '/services' },
-    { title: 'Contact', subtitle: 'Contact page', to: '/contact' },
-    { title: 'Digital Technologies and Software Solutions', subtitle: 'Main service page', to: '/digital-teknolojiler-ve-yazilim-cozumleri' },
-    { title: 'Geographic Information Systems and Spatial Data Analytics', subtitle: 'Digital Technologies section', to: '/digital-teknolojiler-ve-yazilim-cozumleri' },
-    { title: 'Software Development and AI Systems Engineering', subtitle: 'Digital Technologies section', to: '/digital-teknolojiler-ve-yazilim-cozumleri' },
-    { title: 'Cybersecurity Audits, Penetration Testing, and Risk Reporting', subtitle: 'Digital Technologies section', to: '/digital-teknolojiler-ve-yazilim-cozumleri' },
-    { title: 'Smart Cities and Sustainable Urbanism', subtitle: 'Main service page', to: '/akilli-kentler-ve-surdurulebilir-sehircilik' },
-    { title: 'Urban Planning and Regional Master Plans', subtitle: 'Smart Cities section', to: '/akilli-kentler-ve-surdurulebilir-sehircilik' },
-    { title: 'Smart Cities, Industrial Zones, and Digital Twin Solutions', subtitle: 'Smart Cities section', to: '/akilli-kentler-ve-surdurulebilir-sehircilik' },
-    { title: 'Sustainable Urbanism, Green Transition, and Environmental Strategies', subtitle: 'Smart Cities section', to: '/akilli-kentler-ve-surdurulebilir-sehircilik' },
-    { title: 'International Projects and Strategic Finance', subtitle: 'Main service page', to: '/uluslararasi-projeler-ve-stratejik-finansman' },
-    { title: 'EU Projects and Consortium Management', subtitle: 'International Projects section', to: '/uluslararasi-projeler-ve-stratejik-finansman' },
-    { title: 'International Tenders and Strategic Bid Management', subtitle: 'International Projects section', to: '/uluslararasi-projeler-ve-stratejik-finansman' },
-    { title: 'International Credit, Financing, and Investment Advisory', subtitle: 'International Projects section', to: '/uluslararasi-projeler-ve-stratejik-finansman' }
+    { title: 'Services', subtitle: 'Service hub', to: '/services', keywords: ['service'] },
+    { title: 'Contact', subtitle: 'Contact page', to: '/contact', keywords: ['phone', 'address', 'email', 'fax', 'map'] },
+    { title: 'Digital Technologies and Software Solutions', subtitle: 'Main service page', to: '/digital-teknolojiler-ve-yazilim-cozumleri', keywords: ['digital', 'software', 'technology'] },
+    { title: 'Geographic Information Systems and Spatial Analytics', subtitle: 'Digital Technologies › GIS', to: '/digital-teknolojiler-ve-yazilim-cozumleri', tab: 'gis', keywords: ['GIS', 'CBS', 'map', 'remote sensing', 'satellite', 'location', 'spatial', 'geospatial', 'radar'] },
+    { title: 'Software Development and AI Systems Engineering', subtitle: 'Digital Technologies › AI & Software', to: '/digital-teknolojiler-ve-yazilim-cozumleri', tab: 'ai', keywords: ['AI', 'software', 'SaaS', 'cloud', 'mobile', 'app', 'LLM', 'IoT', 'API', 'machine learning'] },
+    { title: 'Cybersecurity Audits, Penetration Testing, and Risk Reporting', subtitle: 'Digital Technologies › Cybersecurity', to: '/digital-teknolojiler-ve-yazilim-cozumleri', tab: 'security', keywords: ['cybersecurity', 'pentest', 'penetration', 'security', 'ISO 27001', 'NIS2', 'vulnerability', 'risk', 'red team'] },
+    { title: 'Smart Cities and Sustainable Urbanism', subtitle: 'Main service page', to: '/akilli-kentler-ve-surdurulebilir-sehircilik', keywords: ['smart city', 'urbanism', 'urban'] },
+    { title: 'Urban Planning and Regional Master Plans', subtitle: 'Smart Cities › Urban Planning', to: '/akilli-kentler-ve-surdurulebilir-sehircilik', tab: 'planning', keywords: ['zoning', 'master plan', 'regional plan', 'urban design', 'planning', 'land use'] },
+    { title: 'Smart Cities, Industrial Zones, and Digital Twin Solutions', subtitle: 'Smart Cities › Digital Twin / OSB', to: '/akilli-kentler-ve-surdurulebilir-sehircilik', tab: 'digital-twin', keywords: ['OSB', 'digital twin', 'industrial zone', 'SCADA', 'IoT', 'sensor', 'twin'] },
+    { title: 'Sustainable Urbanism, Green Transition, and Environmental Strategies', subtitle: 'Smart Cities › Sustainability', to: '/akilli-kentler-ve-surdurulebilir-sehircilik', tab: 'sustainability', keywords: ['green transition', 'environment', 'SUMP', 'climate', 'carbon', 'ESG', 'sustainable', 'emission'] },
+    { title: 'International Projects and Strategic Finance', subtitle: 'Main service page', to: '/uluslararasi-projeler-ve-stratejik-finansman', keywords: ['international', 'project', 'finance'] },
+    { title: 'EU Projects and Consortium Management', subtitle: 'International Projects › EU / Horizon', to: '/uluslararasi-projeler-ve-stratejik-finansman', tab: 'eu-projects', keywords: ['EU', 'Europe', 'Horizon', 'Erasmus', 'consortium', 'grant', 'LIFE', 'Interreg', 'DUT', 'CoVE', 'EUREKA'] },
+    { title: 'International Tenders and Strategic Bid Management', subtitle: 'International Projects › Tenders', to: '/uluslararasi-projeler-ve-stratejik-finansman', tab: 'bid-management', keywords: ['tender', 'bid', 'World Bank', 'UNDP', 'EBRD', 'GIZ', 'ICMPD', 'procurement', 'proposal'] },
+    { title: 'International Credit, Financing, and Investment Advisory', subtitle: 'International Projects › Finance', to: '/uluslararasi-projeler-ve-stratejik-finansman', tab: 'finance', keywords: ['credit', 'investment', 'feasibility', 'green finance', 'EIB', 'IsDB', 'NPV', 'IRR', 'ROI', 'green bond', 'ESG'] }
   ]
 })
 
 const searchResults = computed(() => {
-  const query = searchQuery.value.trim().toLowerCase()
+  const query = normalize(searchQuery.value.trim())
   if (!query) return []
 
   return searchIndex.value.filter((item) => {
-    return item.title.toLowerCase().includes(query) || item.subtitle.toLowerCase().includes(query)
+    const text = normalize([item.title, item.subtitle, ...(item.keywords ?? [])].join(' '))
+    return text.includes(query)
   }).slice(0, 8)
 })
 
@@ -230,7 +241,7 @@ const closeSearch = () => {
 
 const handleSearchSelect = (item) => {
   if (!item) return
-  router.push(item.to)
+  router.push(item.tab ? { path: item.to, query: { tab: item.tab } } : item.to)
   closeSearch()
 }
 
@@ -348,7 +359,9 @@ onBeforeUnmount(() => {
     </main>
 
     <footer class="site-footer">
-      <div class="site-footer-grid page-wrapper">
+      <div class="site-footer-top-bar" aria-hidden="true"></div>
+
+      <div class="site-footer-grid">
         <section class="footer-brand-col">
           <img src="https://yadaglb.com/wp-content/uploads/2020/12/yada2-2.png" alt="YADA GLOBAL" class="footer-logo" />
           <p>{{ translate('contactPage.description') }}</p>
