@@ -47,7 +47,6 @@ const serviceCards = computed(() => {
 <template>
   <section class="page-wrapper page-content route-page">
     <div class="services-hub">
-      <span class="route-page-kicker">{{ translate('nav.services') }}</span>
       <h1>{{ translate('servicesPage.heading') }}</h1>
       <p>{{ translate('servicesPage.description') }}</p>
 

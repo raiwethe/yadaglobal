@@ -36,11 +36,6 @@ const contactContent = computed(() => {
           title: 'E-Posta',
           text: 'info@yadaglb.com',
           href: 'mailto:info@yadaglb.com'
-        },
-        {
-          icon: '🌐',
-          title: 'Sosyal Medya',
-          text: 'LinkedIn, Instagram ve X hesaplarımızdan bize ulaşabilirsiniz.'
         }
       ],
       mapTitle: 'Harita',
@@ -80,11 +75,6 @@ const contactContent = computed(() => {
         title: 'E-mail',
         text: 'info@yadaglb.com',
         href: 'mailto:info@yadaglb.com'
-      },
-      {
-        icon: '🌐',
-        title: 'Social Channels',
-        text: 'You can reach us through our LinkedIn, Instagram, and X accounts.'
       }
     ],
     mapTitle: 'Map',
@@ -98,15 +88,11 @@ const contactContent = computed(() => {
   <section class="page-wrapper page-content route-page contact-page-shell">
     <header class="contact-hero-card">
       <div class="contact-hero-copy">
-        <span class="route-page-kicker">{{ contactContent.kicker }}</span>
         <h1>{{ contactContent.title }}</h1>
         <p>{{ contactContent.intro }}</p>
-        <router-link to="/services" class="route-page-link">{{ contactContent.servicesLabel }}</router-link>
+        <router-link to="/services" class="route-page-link services-link-bold">{{ contactContent.servicesLabel }}</router-link>
       </div>
-      <div class="contact-hero-visual" aria-hidden="true">
-        <div class="contact-hero-orb"></div>
-        <div class="contact-hero-grid"></div>
-      </div>
+      <img src="/images/iletisim.png" alt="" class="contact-hero-visual" aria-hidden="true" />
     </header>
 
     <section class="contact-info-grid">

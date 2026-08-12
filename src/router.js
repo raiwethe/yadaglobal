@@ -6,6 +6,8 @@ import CookiePolicyPage from './pages/CookiePolicyPage.vue'
 import DigitalTechnologiesPage from './pages/DigitalTechnologiesPage.vue'
 import SmartCitiesPage from './pages/SmartCitiesPage.vue'
 import InternationalProjectsPage from './pages/InternationalProjectsPage.vue'
+import ProjectsPage from './pages/ProjectsPage.vue'
+import ProjectShorePage from './pages/ProjectShorePage.vue'
 
 const routes = [
   { path: '/', name: 'home', component: HomePage },
@@ -38,6 +40,9 @@ const routes = [
     redirect: '/uluslararasi-projeler-ve-stratejik-finansman'
   },
   { path: '/contact', name: 'contact', component: ContactPage },
+  { path: '/projeler-ve-referanslar', name: 'projects', component: ProjectsPage },
+  { path: '/projects-and-references', redirect: '/projeler-ve-referanslar' },
+  { path: '/projeler-ve-referanslar/shore', name: 'project-shore', component: ProjectShorePage },
   { path: '/cookie-policy', name: 'cookie-policy', component: CookiePolicyPage },
   { path: '/cookie-politikasi', redirect: '/cookie-policy' },
   { path: '/:pathMatch(.*)*', redirect: '/' }

@@ -26,17 +26,20 @@ const pageContent = {
           {
             title: '🗺️ Nazım, Uygulama Kuralları ve Koruma Amaçlı İmar Planları',
             text: 'Yasal mevzuat, yönetmelik ve şehircilik ilkelerine tam uyumlu 1/5000 ölçekli Nazım İmar Planları ve 1/1000 ölçekli Uygulama İmar Planları hazırlıyoruz. Sit alanları ile tarihi, kültürel ve doğal miras alanlarının sürdürülebilirlik ilkeleri doğrultusunda geleceğe taşınması ve yasal güvence altına alınması için teknik altyapısı güçlü koruma amaçlı imar planları süreçlerini titizlikle yürütüyoruz.',
-            visual: 'İmar Planlama'
+            visual: 'İmar Planlama',
+            image: '/images/urban-planning-development-conservation-plans.png'
           },
           {
             title: '🌍 Stratejik Mekansal Planlama ve Bölge Planları',
             text: 'Kentlerin, havzaların ve metropoliten alanların gelecekteki büyüme projeksiyonlarını, lojistik akslarını, sosyo-ekonomik dinamiklerini ve arazi kullanım kararlarını makro ölçekte kurguluyoruz. Bölgesel kalkınma politikalarına altlık oluşturan üst ölçekli bölge planları geliştirerek doğal afetlere, iklim krizine ve kontrolsüz nüfus baskılarına karşı dirençli kent modelleri tasarlıyoruz.',
-            visual: 'Bölgesel Strateji'
+            visual: 'Bölgesel Strateji',
+            image: '/images/strategic-spatial-regional-planning.png'
           },
           {
             title: '🏆 Tematik Bölgesel Master Planlar ve Turizm Master Planı',
             text: 'Bölgelerin, havzaların ve kentlerin ekonomik, sosyal ve kültürel kalkınmasını tetikleyecek tematik master plan çalışmaları yürütüyoruz. Ulusal ve uluslararası kalkınma ajansları ile bakanlık normlarına tam uyumlu; sürdürülebilir turizm master planı, konsept turizm planları ve bölgesel layout tasarımları ile alanların potansiyelini maksimize eden bütünsel fizibilite raporları hazırlıyoruz.',
-            visual: 'Master Plan'
+            visual: 'Master Plan',
+            image: '/images/thematic-regional-tourism-master-plan.png'
           }
         ]
       },
@@ -54,17 +57,20 @@ const pageContent = {
           {
             title: '🔌 Nesnelerin İnterneti (IoT) Entegrasyonu ve Akıllı OSB Yönetim Ağları',
             text: 'Hem yerel yönetimler hem de Organize Sanayi Bölgeleri için akıllı sayaçlar, hava ve su kalitesi istasyonları, endüstriyel atık takip modülleri ve enerji şebekelerinden gelen IoT verilerini merkezi platformda topluyoruz. Anlık akan sensör verilerini anlamlandırarak OSB yönetimlerinin ve tesislerin su, atık, enerji ve bütçe kaynaklarını maksimum verimlilikle yönetmesini sağlıyoruz.',
-            visual: 'IoT Ağları'
+            visual: 'IoT Ağları',
+            image: '/images/iot-smart-industrial-zone-management.png'
           },
           {
             title: '🏭 3D Kent Modelleme, Fabrika Yerleşkeleri ve Endüstriyel Dijital İkiz Platformları',
             text: 'Fiziksel kentlerin, büyük gayrimenkul projelerinin ve özel sektöre ait sanayi tesislerinin coğrafi, mimari ve altyapısal verilerini kullanarak yaşayan dijital ikiz modelleri üretiyoruz. Gerçek zamanlı simülasyonlarla OSB genişleme alanlarını, lojistik ve üretim akışlarını, afet risk senaryolarını ve kentsel dönüşüm etkilerini yatırım öncesinde 3D modeller üzerinde test ediyoruz.',
-            visual: '3D Simülasyon'
+            visual: '3D Simülasyon',
+            image: '/images/3d-industrial-digital-twin-platform.png'
           },
           {
             title: '🚗 Akıllı Ulaşım, Endüstriyel Lojistik ve SUMP',
             text: 'Kent içi erişilebilirliği artırırken, sanayi bölgelerinin ve holdinglerin karmaşık lojistik ağlarını optimize eden ve karbon emisyonlarını düşürmeyi hedefleyen uluslararası standartlarda SUMP çözümleri sunuyoruz. Trafik yoğunluk haritaları, sinyalizasyon optimizasyonları, personel servis rotaları ve ağır vasıta hat planlamalarıyla akıllı ulaşım altyapılarını veri odaklı yöntemlerle kurguluyoruz.',
-            visual: 'Akıllı Mobilite'
+            visual: 'Akıllı Mobilite',
+            image: '/images/smart-mobility-industrial-logistics-sump.png'
           }
         ]
       },
@@ -82,17 +88,20 @@ const pageContent = {
           {
             title: '🚍 Sıfır Karbon Ulaşım Hizmetleri ve Yeşil Mobilite Dönüşümü',
             text: 'İklim kriziyle mücadele kapsamında, kent içi ve sanayi bölgelerindeki toplu taşıma ile lojistik altyapılarının çevre dostu ve sıfır emisyonlu hale getirilmesi için teknik fizibilite çerçeveleri hazırlıyoruz. Elektrikli otobüs entegrasyonu, şarj istasyonu konumlandırma analizleri ve yeşil mobilite ağ tasarım süreçlerini CBS tabanlı verilerle yönetiyoruz.',
-            visual: 'Sıfır Karbon'
+            visual: 'Sıfır Karbon',
+            image: '/images/zero-carbon-transport-green-mobility.png'
           },
           {
             title: '🗺️ Sürdürülebilir Enerji ve İklim Eylem Planları (SECAP)',
             text: 'Uluslararası standartlarda ve Avrupa Belediye Başkanları Sözleşmesi normlarında, kentlerin geleceğini koruma altına alan SECAP planları hazırlıyoruz. Kentlerin ve endüstriyel bölgelerin sera gazı emisyon envanterlerini çıkarıyor, iklim değişikliğine uyum kapasitesini ölçüyor ve fon mekanizmalarına erişimi destekleyen somut azaltım stratejileri geliştiriyoruz.',
-            visual: 'SECAP'
+            visual: 'SECAP',
+            image: '/images/secap-sustainable-energy-climate-action-plan.png'
           },
           {
             title: '📈 Yeşil Dönüşüm, Döngüsel Ekonomi ve Karbon Ayak İzi Raporlaması',
             text: 'Özel sektör kuruluşları, OSB’ler ve sanayi tesisleri için Avrupa Yeşil Mutabakatı ve SKDM uyum süreçlerini yönetiyoruz. Kurumsal karbon ayak izi raporlaması gerçekleştiriyor, endüstriyel atık yönetimini optimize eden döngüsel ekonomi stratejileri kurguluyor ve şirketlerin sürdürülebilirlik performanslarını uluslararası yeşil finansman desteklerine hazır hale getiriyoruz.',
-            visual: 'Yeşil Finansman'
+            visual: 'Yeşil Finansman',
+            image: '/images/green-transformation-circular-economy-carbon-footprint.png'
           }
         ]
       }
@@ -118,17 +127,20 @@ const pageContent = {
           {
             title: '🗺️ Master, Implementation, and Conservation Zoning Plans',
             text: 'We prepare 1/5000 master zoning plans and 1/1000 implementation zoning plans in full compliance with planning law and technical regulations. For heritage, cultural, and natural conservation areas, we run robust conservation-oriented planning workflows that secure long-term sustainability and legal protection.',
-            visual: 'Zoning Planning'
+            visual: 'Zoning Planning',
+            image: '/images/urban-planning-development-conservation-plans.png'
           },
           {
             title: '🌍 Strategic Spatial Planning and Regional Plans',
             text: 'We model growth projections, logistics corridors, socio-economic dynamics, and land-use decisions for cities, basins, and metropolitan areas at macro scale. Through upper-scale regional plans and analytical planning frameworks, we design resilient urban models against disasters, climate risks, and uncontrolled population pressure.',
-            visual: 'Regional Strategy'
+            visual: 'Regional Strategy',
+            image: '/images/strategic-spatial-regional-planning.png'
           },
           {
             title: '🏆 Thematic Regional Master Plans and Tourism Master Planning',
             text: 'We develop thematic master plans that activate regional economic, social, and cultural potential. Aligned with national and international development agencies and ministerial standards, we produce sustainable tourism master plans, concept tourism plans, and regional layout strategies supported by comprehensive feasibility studies.',
-            visual: 'Master Planning'
+            visual: 'Master Planning',
+            image: '/images/thematic-regional-tourism-master-plan.png'
           }
         ]
       },
@@ -146,17 +158,20 @@ const pageContent = {
           {
             title: '🔌 IoT Integration and Smart Industrial Zone Management Networks',
             text: 'For municipalities and Organized Industrial Zones, we consolidate IoT streams from smart meters, air and water quality stations, industrial waste tracking modules, and energy systems into a central platform. We transform real-time sensor data into actionable insights to optimize water, waste, energy, and budget usage with minimal loss.',
-            visual: 'IoT Networks'
+            visual: 'IoT Networks',
+            image: '/images/iot-smart-industrial-zone-management.png'
           },
           {
             title: '🏭 3D City Modeling, Factory Campuses, and Industrial Digital Twin Platforms',
             text: 'We create living digital twin models by combining geospatial, architectural, and infrastructure data from cities, real-estate developments, and large industrial assets. Through real-time simulation, we test expansion scenarios, production and logistics flows, disaster risk models, and urban transformation impacts before investment decisions are made.',
-            visual: '3D Simulation'
+            visual: '3D Simulation',
+            image: '/images/3d-industrial-digital-twin-platform.png'
           },
           {
             title: '🚗 Smart Mobility, Industrial Logistics, and SUMP',
             text: 'We deliver internationally aligned SUMP solutions that improve urban accessibility, optimize complex industrial logistics networks, and reduce carbon emissions. Using traffic density mapping, signal optimization, staff shuttle routing, and heavy-vehicle corridor planning, we design data-driven mobility infrastructure for both cities and major enterprises.',
-            visual: 'Smart Mobility'
+            visual: 'Smart Mobility',
+            image: '/images/smart-mobility-industrial-logistics-sump.png'
           }
         ]
       },
@@ -174,17 +189,20 @@ const pageContent = {
           {
             title: '🚍 Net-Zero Transport Services and Green Mobility Transition',
             text: 'To address climate challenges, we prepare technical feasibility frameworks for transforming public transport and logistics systems into low-emission, environmentally responsible networks. We manage electric bus integration, charging station location analysis, and green mobility network design through GIS-based planning data.',
-            visual: 'Net-Zero'
+            visual: 'Net-Zero',
+            image: '/images/zero-carbon-transport-green-mobility.png'
           },
           {
             title: '🗺️ Sustainable Energy and Climate Action Plans (SECAP)',
             text: 'Following international standards and Covenant of Mayors principles, we prepare SECAP programs that safeguard long-term urban resilience. We develop greenhouse gas inventories for cities and industrial districts, assess adaptation capacity, and define practical mitigation strategies that strengthen access to climate and development financing.',
-            visual: 'SECAP'
+            visual: 'SECAP',
+            image: '/images/secap-sustainable-energy-climate-action-plan.png'
           },
           {
             title: '📈 Green Transition, Circular Economy, and Carbon Footprint Reporting',
             text: 'For private enterprises, industrial zones, and production facilities, we manage compliance with the European Green Deal and Carbon Border Adjustment Mechanism requirements. We deliver corporate carbon footprint reporting, circular-economy strategy design for industrial waste optimization, and readiness roadmaps for green finance and regional development support.',
-            visual: 'Green Finance'
+            visual: 'Green Finance',
+            image: '/images/green-transformation-circular-economy-carbon-footprint.png'
           }
         ]
       }
@@ -206,6 +224,17 @@ watchEffect(() => {
 const isActive = (key) => activeTab.value === key
 const selectTab = (key) => {
   activeTab.value = key
+}
+
+const getBlockVisualStyle = (block) => {
+  if (!block.image) return undefined
+
+  return {
+    backgroundImage: `linear-gradient(140deg, rgba(11, 47, 119, 0.28), rgba(15, 143, 152, 0.18)), url(${block.image})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  }
 }
 </script>
 
@@ -250,7 +279,7 @@ const selectTab = (key) => {
 
         <section class="digital-tech-blocks">
           <article v-for="block in currentTab.blocks" :key="block.title" class="digital-tech-block">
-            <div class="digital-tech-block-visual" aria-hidden="true">
+            <div class="digital-tech-block-visual" :style="getBlockVisualStyle(block)" aria-hidden="true">
               <span class="digital-tech-visual-pill">{{ block.visual }}</span>
             </div>
             <div class="digital-tech-block-copy">

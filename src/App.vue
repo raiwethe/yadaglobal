@@ -205,27 +205,27 @@ const policyReports = computed(() => [
 const footerLabels = computed(() => {
   if (locale.value === 'tr') {
     return {
-      services: 'Hizmetlerimiz',
-      policies: 'Kurumsal Politika ve Uyum',
+      services: 'HİZMETLERİMİZ',
+      policies: 'KURUMSAL POLİTİKA VE UYUM',
       links: 'İlgili Bağlantılar',
       servicesQuick: 'HİZMETLERİMİZ',
       servicesName: 'Hizmetlerimiz',
       contactQuick: 'İLETİŞİM',
       contactName: 'İletişim',
-      follow: 'Bizi Takip Edin',
+      follow: 'BİZİ TAKİP EDİN',
       rights: 'Tüm hakları saklıdır.'
     }
   }
 
   return {
-    services: 'Services',
-    policies: 'Corporate Policy and Compliance',
+    services: 'SERVICES',
+    policies: 'CORPORATE POLICY AND COMPLIANCE',
     links: 'Related Links',
     servicesQuick: 'SERVICES',
     servicesName: 'Services',
     contactQuick: 'CONTACT',
     contactName: 'Contact',
-    follow: 'Follow Us',
+    follow: 'FOLLOW US',
     rights: 'All rights reserved.'
   }
 })
@@ -308,6 +308,7 @@ onBeforeUnmount(() => {
             </router-link>
           </div>
         </div>
+        <router-link to="/projeler-ve-referanslar" class="nav-link">{{ translate('nav.projects') }}</router-link>
         <router-link to="/contact" class="nav-link">{{ translate('nav.contact') }}</router-link>
       </nav>
 
@@ -365,14 +366,11 @@ onBeforeUnmount(() => {
         <section class="footer-brand-col">
           <img src="https://yadaglb.com/wp-content/uploads/2020/12/yada2-2.png" alt="YADA GLOBAL" class="footer-logo" />
           <p>{{ translate('contactPage.description') }}</p>
-          <h2>{{ footerLabels.links }}</h2>
           <div class="footer-related-links">
             <router-link to="/services" class="footer-related-item">
-              <span>{{ footerLabels.servicesQuick }}</span>
               <strong>{{ footerLabels.servicesName }}</strong>
             </router-link>
             <router-link to="/contact" class="footer-related-item">
-              <span>{{ footerLabels.contactQuick }}</span>
               <strong>{{ footerLabels.contactName }}</strong>
             </router-link>
           </div>

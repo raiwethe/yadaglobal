@@ -26,32 +26,38 @@ const pageContent = {
           {
             title: 'Mekansal Veri Analitiği, Modelleme ve CBS Çözümleri',
             text: 'Kamu kurumları ve yerel yönetimlerin ham mekansal verilerini gelişmiş algoritmalara dayalı GIS analizi yöntemleriyle işliyoruz. Kentsel büyüme projeksiyonları, afet risk senaryoları, lojistik ağ optimizasyonları ve mekansal veri tabanı tasarımları ile geleceğe yönelik sürdürülebilir tahmin modelleri üretiyoruz.',
-            visual: 'Mekansal Zeka'
+            visual: 'Mekansal Zeka',
+            image: '/images/gis-spatial-data-analytics.png'
           },
           {
             title: 'Uzaktan Algılama ve Uydu Görüntüsü Analizi',
             text: 'Yüksek çözünürlüklü uydu ve radar görüntüleri üzerinden uzaktan algılama teknolojileriyle zaman serisi analizleri gerçekleştiriyoruz. Arazi kullanımı değişiklikleri, çevre kirliliği izleme, kentsel ısı adası haritalama ile endüstriyel tarımda bitki sağlığı takibi ve rekolte tahmin modelleri geliştiriyoruz.',
-            visual: 'Uzaktan Algılama'
+            visual: 'Uzaktan Algılama',
+            image: '/images/remote-sensing-satellite-imagery-analysis.png'
           },
           {
             title: 'Özel Sektör İçin Lokasyon Analitiği ve Ticari İş Zekası',
             text: 'Perakende, lojistik, enerji ve finans sektörlerindeki küresel ve yerel markalar için konum tabanlı değer önerileri kurguluyoruz. Nüfus yoğunluğu, demografik yapı, erişilebilirlik ve rakip analizi verilerini harita üzerinde çakıştırarak yer seçimi süreçlerini bilimsel olarak yönetiyoruz.',
-            visual: 'Lokasyon Analitiği'
+            visual: 'Lokasyon Analitiği',
+            image: '/images/location-analytics-business-intelligence.png'
           },
           {
             title: 'Yatırım Arazi Seçimi ve Mekansal Risk Yönetimi',
             text: 'GES/RES ve büyük ölçekli endüstriyel tesis yatırımları öncesinde CBS tabanlı fizibilite raporları hazırlıyoruz. Arazinin eğim, bakı, trafo hatlarına yakınlık ve yasal sınır analizlerini yaparken; taşkın, sel ve deprem risk analitiği sunuyoruz.',
-            visual: 'Risk Haritalama'
+            visual: 'Risk Haritalama',
+            image: '/images/investment-site-selection-spatial-risk-analysis.png'
           },
           {
             title: 'Web-GIS Tabanlı Yönetim Portalları ve Sistem Entegrasyonu',
             text: 'Kamu ve özel sektör kuruluşlarının coğrafi veri tabanlarını merkezi yapıda topluyoruz. Tarayıcı tabanlı harita yönetimi, sorgulama ve dinamik görselleştirme için ölçeklenebilir Web-GIS portalları ve bulut altyapıları kurguluyoruz.',
-            visual: 'Web GIS'
+            visual: 'Web GIS',
+            image: '/images/web-gis-management-system-integration.png'
           },
           {
             title: 'Büyük Mekansal Veri İşleme ve IoT Haritalama',
             text: 'Akıllı şehir donanımları, saha sensörleri ve mobil uygulamalardan akan büyük mekansal veri akışlarını tek bir merkeze entegre ediyoruz. Gerçek zamanlı lokasyon verilerini filtreleyerek dinamik coğrafi karar destek sistemleri inşa ediyoruz.',
-            visual: 'Büyük Mekansal Veri'
+            visual: 'Büyük Mekansal Veri',
+            image: '/images/big-spatial-data-iot-mapping.png'
           }
         ]
       },
@@ -69,22 +75,26 @@ const pageContent = {
           {
             title: 'Yapay Zeka Tabanlı Karar Destek Sistemleri ve Veri Görselleştirme',
             text: 'Kamu yönetimi, yerel yönetimler ve kurumsal liderler için tahmine dayalı analitik sunan akıllı karar destek sistemleri geliştiriyoruz. Operasyonel verileri makine öğrenmesi algoritmalarıyla işleyerek, riskleri azaltan ve gelecek senaryolarını öngören paneller tasarlıyoruz.',
-            visual: 'AI Panelleri'
+            visual: 'AI Panelleri',
+            image: '/images/ai-decision-support-data-visualization.png'
           },
           {
             title: 'AI Entegreli Özel Kurumsal Yazılım Çözümleri ve SaaS Mimarisi',
             text: 'Şirketlerin ve kamu organizasyonlarının geleneksel iş akışlarını akıllı algoritmalarla otomatize eden kurumsal yazılım çözümleri üretiyoruz. LLM ve derin öğrenme entegrasyonlarına sahip bulut tabanlı SaaS mimarileriyle dijital dönüşüm süreçlerini hızlandırıyoruz.',
-            visual: 'Bulut Yerel'
+            visual: 'Bulut Yerel',
+            image: '/images/ai-enterprise-software-saas.png'
           },
           {
             title: 'Akıllı Kent Çözümleri ve Mobil Uygulama Geliştirme',
             text: 'Yerel yönetimler, belediyeler ve B2B şirketler için saha yönetimini, vatandaş iletişimini ve veri toplama sürecini kolaylaştıran mobil uygulamalar geliştiriyoruz. Yapay zeka destekli akıllı şehir asistanları ve lokasyon bazlı servisler ile kullanıcı deneyimini güçlendiriyoruz.',
-            visual: 'Mobil Akıllı Kent'
+            visual: 'Mobil Akıllı Kent',
+            image: '/images/smart-city-mobile-application-development.png'
           },
           {
             title: 'IoT Donanım Entegrasyonları ve Güvenli API Mimarisi',
             text: 'Farklı yazılım platformları, eski veri tabanları ve IoT donanımlarının gecikmesiz haberleşmesini sağlayan güvenli API köprüleri inşa ediyoruz. Sensör verilerini yapay zeka motorlarına taşıyan veri boru hatlarını kuruyor, veri bütünlüğünü güçlü şifreleme protokolleriyle koruyoruz.',
-            visual: 'Güvenli API'
+            visual: 'Güvenli API',
+            image: '/images/iot-secure-api-integration.png'
           }
         ]
       },
@@ -102,22 +112,26 @@ const pageContent = {
           {
             title: 'Akıllı Şehir ve Kritik Altyapı Siber Güvenlik Zafiyet Analizi',
             text: 'Şehirlerin su, enerji, atık su ve aydınlatma şebekelerini yöneten endüstriyel kontrol sistemlerindeki güvenlik açıklarını tespit ediyoruz. IoT sensör ağları ve sinyalizasyon donanımlarının haberleşme protokollerini denetleyerek gerekli güvenlik önlemlerini raporluyoruz.',
-            visual: 'Kritik Altyapı'
+            visual: 'Kritik Altyapı',
+            image: '/images/smart-city-critical-infrastructure-cybersecurity.png'
           },
           {
             title: 'Mekansal Veri ve Dijital İkiz Sızma Testleri',
             text: 'Kadastro, mülkiyet ve altyapı harita veri tabanlarının siber dayanıklılığını denetliyoruz. Web-GIS portalları ve dijital ikiz platformlarının API, entegrasyon ve yetkilendirme açıklarını tespit ederek teknik bulguları raporluyoruz.',
-            visual: 'Dijital İkiz Güvenliği'
+            visual: 'Dijital İkiz Güvenliği',
+            image: '/images/gis-digital-twin-penetration-testing.png'
           },
           {
             title: 'Kurumsal Pentest ve Teknik Risk Raporlaması',
             text: 'Kurumların iç ve dış ağ altyapılarının, bulut sunucularının ve veri merkezlerinin siber tehditlere karşı direncini ölçüyoruz. Kaynak kod analizi ve oltalama simülasyonlarıyla insan kaynaklı riskleri değerlendirerek öncelikli aksiyon planları sunuyoruz.',
-            visual: 'Pentest Raporlama'
+            visual: 'Pentest Raporlama',
+            image: '/images/corporate-penetration-testing-risk-assessment.png'
           },
           {
             title: 'Uluslararası Siber Regülasyon ve Fon Uyum Danışmanlığı',
             text: 'AB siber güvenlik direktifleri ve bilgi güvenliği yönetim standartlarına yönelik gap analizleri ve uyum raporlama süreçlerini yönetiyoruz. Uluslararası finansmanlı dijital dönüşüm projelerinde zorunlu teknik siber risk raporlarını hazırlıyoruz.',
-            visual: 'Uyum Stratejisi'
+            visual: 'Uyum Stratejisi',
+            image: '/images/cybersecurity-regulatory-compliance-advisory.png'
           }
         ]
       }
@@ -143,32 +157,38 @@ const pageContent = {
           {
             title: 'Spatial Analytics, Modeling, and GIS Solutions',
             text: 'We process raw spatial data from public institutions and local authorities through advanced GIS methods. We develop sustainable forecasting models for urban growth, disaster scenarios, logistics network optimization, and geodatabase architecture.',
-            visual: 'Spatial Intelligence'
+            visual: 'Spatial Intelligence',
+            image: '/images/gis-spatial-data-analytics.png'
           },
           {
             title: 'Remote Sensing and Satellite Imagery Analysis',
             text: 'Using high-resolution satellite and radar imagery, we deliver time-series remote sensing analysis. We support land-use change monitoring, environmental surveillance, urban heat mapping, and agricultural vegetation and yield modeling.',
-            visual: 'Remote Sensing'
+            visual: 'Remote Sensing',
+            image: '/images/remote-sensing-satellite-imagery-analysis.png'
           },
           {
             title: 'Location Analytics and Commercial Business Intelligence',
             text: 'For retail, logistics, energy, and finance, we build location-based value propositions. By overlaying demographic, accessibility, and competitor layers, we guide high-value branch, store, and commercial site selection with evidence-based workflows.',
-            visual: 'Location Analytics'
+            visual: 'Location Analytics',
+            image: '/images/location-analytics-business-intelligence.png'
           },
           {
             title: 'Investment Site Selection and Spatial Risk Management',
             text: 'Before large-scale energy and industrial investments, we deliver GIS-based feasibility studies. We analyze slope, aspect, utility proximity, and legal constraints, while providing flood, storm, and earthquake risk intelligence for finance and insurance use cases.',
-            visual: 'Risk Mapping'
+            visual: 'Risk Mapping',
+            image: '/images/investment-site-selection-spatial-risk-analysis.png'
           },
           {
             title: 'Web GIS Portals and System Integration',
             text: 'We centralize geospatial databases for public and private organizations. We design scalable Web GIS portals and cloud infrastructure that enable secure browser-based map operations, querying, and dynamic visualization.',
-            visual: 'Web GIS'
+            visual: 'Web GIS',
+            image: '/images/web-gis-management-system-integration.png'
           },
           {
             title: 'Big Spatial Data Processing and IoT Mapping',
             text: 'We integrate high-volume spatial streams from smart-city hardware, field sensors, and mobile platforms into unified architectures. With real-time filtering and orchestration, we build dynamic spatial decision support systems for rapid operations.',
-            visual: 'Spatial Big Data'
+            visual: 'Spatial Big Data',
+            image: '/images/big-spatial-data-iot-mapping.png'
           }
         ]
       },
@@ -186,22 +206,26 @@ const pageContent = {
           {
             title: 'AI-Powered Decision Support and Data Visualization',
             text: 'We engineer intelligent decision support systems for public management and enterprise leadership. By applying machine learning to operational data, we build predictive panels that reduce risk, improve planning precision, and accelerate action.',
-            visual: 'AI Dashboards'
+            visual: 'AI Dashboards',
+            image: '/images/ai-decision-support-data-visualization.png'
           },
           {
             title: 'AI-Integrated Custom Enterprise Software and SaaS Architecture',
             text: 'We design custom enterprise software that modernizes legacy workflows through intelligent automation. With LLM and deep-learning integrations, our cloud-native SaaS architectures increase agility and speed up digital transformation delivery.',
-            visual: 'Cloud Native'
+            visual: 'Cloud Native',
+            image: '/images/ai-enterprise-software-saas.png'
           },
           {
             title: 'Smart City Solutions and Mobile Application Development',
             text: 'We create mobile solutions for municipalities and B2B teams to streamline field operations, citizen communication, and data capture. AI-enabled assistants, location-aware services, and modern UX principles drive practical, high-adoption applications.',
-            visual: 'Mobile Smart City'
+            visual: 'Mobile Smart City',
+            image: '/images/smart-city-mobile-application-development.png'
           },
           {
             title: 'IoT Integrations and Secure API Architecture',
             text: 'We connect heterogeneous platforms, legacy systems, and IoT environments through robust API layers. Sensor pipelines feed AI engines in near real-time while encryption standards protect data integrity and platform interoperability.',
-            visual: 'Secure API'
+            visual: 'Secure API',
+            image: '/images/iot-secure-api-integration.png'
           }
         ]
       },
@@ -219,22 +243,26 @@ const pageContent = {
           {
             title: 'Smart City and Critical Infrastructure Vulnerability Analysis',
             text: 'We assess vulnerabilities in industrial control environments managing water, energy, wastewater, and lighting systems. We audit communications in IoT sensor networks and signaling components, then deliver prioritized control recommendations.',
-            visual: 'Critical Infrastructure'
+            visual: 'Critical Infrastructure',
+            image: '/images/smart-city-critical-infrastructure-cybersecurity.png'
           },
           {
             title: 'Geospatial Data and Digital Twin Penetration Testing',
             text: 'We evaluate cyber resilience of strategic geospatial assets such as cadastral, ownership, and infrastructure datasets. We test API and integration points in Web GIS and digital twin platforms, including authorization and leakage risks.',
-            visual: 'Digital Twin Security'
+            visual: 'Digital Twin Security',
+            image: '/images/gis-digital-twin-penetration-testing.png'
           },
           {
             title: 'Enterprise Pentesting and Technical Risk Reporting',
             text: 'We measure resistance of internal and external networks, cloud servers, and data-center environments through controlled penetration testing. Source code review and phishing simulations expose human and technical risks with actionable remediation paths.',
-            visual: 'Pentest Reporting'
+            visual: 'Pentest Reporting',
+            image: '/images/corporate-penetration-testing-risk-assessment.png'
           },
           {
             title: 'International Cyber Regulation and Donor Compliance Advisory',
             text: 'We manage gap analysis and compliance reporting against EU cybersecurity directives and information-security standards. For internationally funded digital transformation programs, we prepare mandatory technical cyber risk and compliance documentation.',
-            visual: 'Compliance Strategy'
+            visual: 'Compliance Strategy',
+            image: '/images/cybersecurity-regulatory-compliance-advisory.png'
           }
         ]
       }
@@ -256,6 +284,17 @@ watchEffect(() => {
 const isActive = (key) => activeTab.value === key
 const selectTab = (key) => {
   activeTab.value = key
+}
+
+const getBlockVisualStyle = (block) => {
+  if (!block.image) return undefined
+
+  return {
+    backgroundImage: `linear-gradient(140deg, rgba(11, 47, 119, 0.28), rgba(15, 143, 152, 0.18)), url(${block.image})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  }
 }
 </script>
 
@@ -300,7 +339,7 @@ const selectTab = (key) => {
 
         <section class="digital-tech-blocks">
           <article v-for="block in currentTab.blocks" :key="block.title" class="digital-tech-block">
-            <div class="digital-tech-block-visual" aria-hidden="true">
+            <div class="digital-tech-block-visual" :style="getBlockVisualStyle(block)" aria-hidden="true">
               <span class="digital-tech-visual-pill">{{ block.visual }}</span>
             </div>
             <div class="digital-tech-block-copy">

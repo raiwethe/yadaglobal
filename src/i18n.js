@@ -20,6 +20,7 @@ const messages = {
     nav: {
       about: 'About',
       services: 'Services',
+      projects: 'Projects & References',
       contact: 'Contact'
     },
     searchPlaceholder: 'Search...',
@@ -31,7 +32,7 @@ const messages = {
       approachTab: 'OUR APPROACH',
       policiesTab: 'CORPORATE GOVERNANCE & COMPLIANCE',
       profileDescription: 'YADA GLOBAL develops sustainable and innovative projects.',
-      approach: 'OUR APPROACH',
+      approach: 'Turn Ideas into Impact',
       approachDescription: 'Our solutions are shaped by technology-focused analytics and strategic planning.',
       policies: 'CORPORATE GOVERNANCE & COMPLIANCE',
       policiesDescription: 'Transparency, quality and sustainability form the basis of our way of doing business.',
@@ -56,7 +57,7 @@ const messages = {
     },
     companyProfile: {
       title: 'Yada Global',
-      tagline: 'For a better future, with data, technology, together.',
+      tagline: 'Think Outside the Box',
       paragraphs: {
         p1: '<strong>YADA GLOBAL</strong> is a consultancy and technology company operating in <strong>digital technologies</strong>, <strong>smart cities</strong> and <strong>international project development</strong>. We contribute to transformation processes by developing <strong>data-driven</strong>, <strong>innovative</strong> and <strong>sustainable solutions</strong> for public institutions, local governments, international organizations and the private sector.',
         p2: 'Our areas of expertise include <strong>Geographic Information Systems (GIS)</strong>, <strong>software development</strong>, <strong>artificial intelligence</strong>, <strong>cybersecurity</strong>, <strong>spatial planning</strong>, <strong>smart city technologies</strong> and <strong>international fund programs</strong>. With our interdisciplinary approach, we provide <strong>end-to-end consultancy and technology solutions</strong> from strategic planning to digital transformation.',
@@ -103,7 +104,7 @@ const messages = {
       approach: 'Approach'
     },
     servicesPage: {
-      heading: 'Services',
+      heading: 'OUR SERVICES',
       description: 'Explore the advisory, technology and project development services we provide for institutions and organizations.'
     },
     contactPage: {
@@ -140,9 +141,9 @@ const messages = {
     },
     policiesPage: {
       label: 'Corporate Governance & Compliance',
-      heading: 'Corporate Governance & Compliance',
-      description: 'Yada Global conducts its operations in line with ethical values, data security, equality and sustainability principles; adopting a corporate governance approach that complies with national legislation and international standards.',
-      heroNote: 'Access our corporate policy documents and compliance resources below.',
+      heading: 'Guided by Values',
+      description: 'At Yada Global, we conduct all our operations in line with the principles of <strong>ethical values, transparency, data security, equality, and sustainability</strong>. In our business processes, we embrace a responsible and trustworthy working culture that adheres to <strong>national legislation, international standards, and corporate governance principles</strong>.<br><br>In our relationships with our <strong>employees and stakeholders</strong>, we uphold honesty, fairness, and accountability; and in our technology and data-driven work, we prioritize <strong>information security, personal data protection, and responsible innovation</strong>.',
+      heroNote: '<strong>You can access our corporate policy documents and compliance resources below.</strong>',
       sections: {
         dataProtection: {
           title: 'Data Protection',
@@ -209,6 +210,7 @@ const messages = {
     nav: {
       about: 'Hakkımızda',
       services: 'HİZMETLERİMİZ',
+      projects: 'PROJELER & REFERANSLAR',
       contact: 'İLETİŞİM'
     },
     searchPlaceholder: 'Ara...',
@@ -220,7 +222,7 @@ const messages = {
       approachTab: 'YAKLAŞIMIMIZ',
       policiesTab: 'KURUMSAL POLİTİKALAR',
       profileDescription: 'YADA GLOBAL olarak sürdürülebilir ve yenilikçi projeler geliştiriyoruz.',
-      approach: 'Yaklaşımımız',
+      approach: 'Fikri Etkiye Dönüştür',
       approachDescription: 'Çözümlerimiz, teknoloji odaklı analitik ve stratejik planlama ile şekilleniyor.',
       policiesTab: 'KURUMSAL YÖNETİM VE UYUM',
       policies: 'KURUMSAL YÖNETİM VE UYUM',
@@ -246,9 +248,9 @@ const messages = {
     },
     policiesPage: {
       label: 'Kurumsal Yönetim ve Uyum',
-      heading: 'Kurumsal Politikalar ve Uyum',
-      description: 'Yada Global olarak faaliyetlerimizi etik değerler, veri güvenliği, eşitlik ve sürdürülebilirlik ilkeleri doğrultusunda yürütüyor; ulusal mevzuat ve uluslararası standartlarla uyumlu kurumsal yönetim anlayışını benimsiyoruz.',
-      heroNote: 'Kurumsal politika belgelerimize ve uyum dokümanlarımıza aşağıdan ulaşabilirsiniz.',
+      heading: 'Değerlerle Yönetiyoruz',
+      description: 'Yada Global olarak faaliyetlerimizi <strong>etik değerler, şeffaflık, veri güvenliği, eşitlik ve sürdürülebilirlik</strong> ilkeleri doğrultusunda yürütüyoruz. İş süreçlerimizde <strong>ulusal mevzuata, uluslararası standartlara ve kurumsal yönetim ilkelerine</strong> uygun, sorumlu ve güvenilir bir çalışma anlayışını benimsiyoruz.<br><br>Çalışanlarımız ve paydaşlarımızla ilişkilerimizde <strong>dürüstlük, adalet ve hesap verebilirliği</strong> gözetiyor; teknoloji ve veri odaklı çalışmalarımızda <strong>bilgi güvenliği, kişisel verilerin korunması ve sorumlu inovasyonu</strong> önceliklendiriyoruz.',
+      heroNote: '<strong>Kurumsal politika belgelerimize ve uyum dokümanlarımıza aşağıdan ulaşabilirsiniz.</strong>',
       sections: {
         dataProtection: {
           title: 'VERİ KORUMA',
@@ -312,7 +314,7 @@ const messages = {
     },
     companyProfile: {
       title: 'Yada Global',
-      tagline: 'Daha iyi bir gelecek için, veriyle, teknolojiyle, birlikte.',
+      tagline: 'Sınırların Ötesinde Düşün',
       paragraphs: {
         p1: '<strong>Yada Global</strong>, <strong>dijital teknolojiler</strong>, <strong>akıllı kentler</strong> ve <strong>uluslararası proje geliştirme</strong> alanlarında faaliyet gösteren bir <strong>danışmanlık ve teknoloji şirketidir</strong>. Kamu kurumları, yerel yönetimler, uluslararası kuruluşlar ve özel sektör için <strong>veri odaklı</strong>, <strong>yenilikçi</strong> ve <strong>sürdürülebilir çözümler</strong> geliştirerek kurumların dönüşüm süreçlerine katkı sağlamaktadır.',
         p2: '<strong>Uzmanlık alanlarımız arasında Coğrafi Bilgi Sistemleri (CBS)</strong>, <strong>yazılım geliştirme</strong>, <strong>yapay zekâ</strong>, <strong>siber güvenlik</strong>, <strong>mekânsal planlama</strong>, <strong>akıllı kent teknolojileri</strong> ve <strong>uluslararası fon programları</strong> yer almaktadır. Farklı disiplinleri bir araya getiren yaklaşımımız sayesinde kurumlara stratejik planlamadan dijital dönüşüme kadar <strong>uçtan uca danışmanlık ve teknoloji çözümleri</strong> sunuyoruz.',
@@ -354,7 +356,7 @@ const messages = {
       approach: 'Yaklaşımımız'
     },
     servicesPage: {
-      heading: 'Hizmetler',
+      heading: 'HİZMETLERİMİZ',
       description: 'Kurumlar ve organizasyonlar için sunduğumuz danışmanlık, teknoloji ve proje geliştirme hizmetlerini keşfedin.'
     },
     contactPage: {
