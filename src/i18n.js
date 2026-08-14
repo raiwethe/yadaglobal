@@ -18,6 +18,7 @@ const locale = ref(initialLang)
 const messages = {
   en: {
     nav: {
+      home: 'Home',
       about: 'About',
       services: 'Services',
       projects: 'Projects & References',
@@ -208,6 +209,7 @@ const messages = {
   },
   tr: {
     nav: {
+      home: 'Ana Sayfa',
       about: 'Hakkımızda',
       services: 'HİZMETLERİMİZ',
       projects: 'PROJELER & REFERANSLAR',

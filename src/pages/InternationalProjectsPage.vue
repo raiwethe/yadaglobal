@@ -5,16 +5,44 @@ import { locale } from '../i18n.js'
 
 const route = useRoute()
 
+const internationalInstitutions = [
+  'Dünya Bankası (World Bank)',
+  'Avrupa Yatırım Bankası (EIB)',
+  'Avrupa İmar ve Kalkınma Bankası (EBRD)',
+  'Asya Kalkınma Bankası (ADB)',
+  'İslam Kalkınma Bankası (IsDB)',
+  'Birleşmiş Milletler Kalkınma Programı (UNDP)',
+  'Alman Uluslararası İşbirliği Kurumu (GIZ)',
+  'Expertise France (EF)',
+  'Uluslararası Göç Politikaları Geliştirme Merkezi (ICMPD)',
+  'Alman Ticaret ve Yatırım Ajansı (GTAI)',
+  'Birleşmiş Milletler Küresel Pazar Yeri (UNGM)'
+]
+
+const internationalInstitutionsEn = [
+  'World Bank',
+  'European Investment Bank (EIB)',
+  'European Bank for Reconstruction and Development (EBRD)',
+  'Asian Development Bank (ADB)',
+  'Islamic Development Bank (IsDB)',
+  'United Nations Development Programme (UNDP)',
+  'German Agency for International Cooperation (GIZ)',
+  'Expertise France (EF)',
+  'International Centre for Migration Policy Development (ICMPD)',
+  'Germany Trade & Invest (GTAI)',
+  'United Nations Global Marketplace (UNGM)'
+]
+
 const pageContent = {
   tr: {
     kicker: 'ÇÖZÜMLERİMİZ',
     title: 'ULUSLARARASI PROJELER VE STRATEJİK FİNANSMAN',
     description:
-      'Yada Global olarak; köklü teknik ve kentsel uzmanlığımızı uluslararası finansman mekanizmalarıyla buluşturuyoruz. Horizon Europe, Erasmus+ KA2, LIFE, Interreg, EUREKA ve Digital Europe gibi küresel hibe programlarından; World Bank, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France ve GTAI gibi çok taraflı kuruluşların fonladığı makro ölçekli yatırım, ihale ve kredi süreçlerine kadar tüm aşamalarda stratejik çözüm ortağıyız. Birleşmiş Milletler Sürdürülebilir Kalkınma Amaçları ile uyumlu projelere hem lider danışmanlık sağlıyor hem de konsorsiyumlara teknoloji ortağı olarak doğrudan dahil oluyoruz.',
+      'Yada Global olarak; köklü teknik ve kentsel uzmanlığımızı uluslararası finansman mekanizmalarıyla buluşturuyoruz. Horizon Europe, Erasmus+ KA2, LIFE, Interreg, EUREKA ve Digital Europe gibi küresel hibe programlarından; Dünya Bankası, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France ve GTAI gibi çok taraflı kuruluşların fonladığı makro ölçekli yatırım, ihale ve kredi süreçlerine kadar tüm aşamalarda stratejik çözüm ortağıyız. Birleşmiş Milletler Sürdürülebilir Kalkınma Amaçları ile uyumlu projelere hem lider danışmanlık sağlıyor hem de konsorsiyumlara teknoloji ortağı olarak doğrudan dahil oluyoruz.',
     tabs: [
       {
         key: 'eu-projects',
-        label: '🇪🇺 Avrupa Birliği Projeleri ve Konsorsiyum Yönetimi',
+        label: 'Avrupa Birliği Projeleri ve Konsorsiyum Yönetimi',
         intro:
           'Yada Global; çok uluslu Ar-Ge, inovasyon, yeşil dönüşüm, mesleki mükemmeliyet ve akıllı şehircilik odaklı Avrupa Birliği projeleri süreçlerinde stratejik danışman ve resmi konsorsiyum ortağı olarak yer almaktadir. Horizon Europe, DUT, CoVE, Erasmus+ KA2, LIFE ve Digital Europe kapsamında başvuru stratejilerinden yürütücü ortak rollerine ve nihai raporlama süreçlerine kadar tüm döngüyü uçtan uca yönetiyoruz.',
         iconCards: [
@@ -24,20 +52,20 @@ const pageContent = {
         ],
         blocks: [
           {
-            title: '🤝 Uluslararası Konsorsiyum Yönetimi ve AB Hibe Süreçleri Danışmanlığı',
+            title: 'Uluslararası Konsorsiyum Yönetimi ve AB Hibe Süreçleri Danışmanlığı',
             text: 'Avrupa Komisyonu ve ilişkili fon otoriteleri tarafından yayımlanan çok uluslu çağrıları yakından takip ederek kurumunuza en uygun fonlama stratejilerini kurguluyoruz. Consortium Building yetkinliğimizle Horizon Europe, DUT, CoVE, LIFE ve Eurostars projeleri için sınır ötesi konsorsiyumlar oluşturuyor; çağrı analizi, başvuru stratejisi, idari-mali danışmanlık ve nihai raporlama aşamalarını AB standartlarında yönetiyoruz.',
             visual: 'AB Konsorsiyum',
             image: '/images/international-consortium-management-eu-grants.png'
           },
           {
-            title: '🎓 Erasmus+ KA2 Stratejik Ortaklıklar ve Proje Süreç Yönetimi',
+            title: 'Erasmus+ KA2 Stratejik Ortaklıklar ve Proje Süreç Yönetimi',
             text: 'Eğitim, gençlik, kentsel farkındalık ve kurumsal kapasite geliştirme alanlarında uluslararası işbirliklerini tetikleyen Erasmus+ KA2 stratejik ortaklık projelerinde kurumların doğru konsorsiyumlara dahil olması ve süreçlerin koordinasyonu için danışmanlık sunuyoruz. Uluslararası ortaklık toplantıları ve LTT faaliyetlerinin lojistik, idari ve teknik planlamasını Avrupa Komisyonu normlarına uyumlu şekilde yönetiyoruz.',
             visual: 'Erasmus+ KA2',
             image: '/images/erasmus-ka2-strategic-partnerships.png'
           },
           {
-            title: '💻 Dijital İş Paketi Liderliği, Uygulama Geliştirme ve Oyunlaştırma',
-            text: 'Dahil olduğumuz AB projelerinde yalnızca süreç danışmanlığı değil, resmi proje ortağı olarak doğrudan teknik çıktı sorumluluğu üstleniyoruz. Yaygınlaştırma stratejilerine uygun web platformları kuruyor; Erasmus+ ve CoVE projeleri için çok dilli, SCORM uyumlu LMS altyapıları geliştiriyoruz. Senaryo tabanlı oyunlaştırma kurguları ve projeye özel mobil/web uygulama geliştirme faaliyetleriyle dijital iş paketlerini üretiyoruz.',
+            title: 'Dijital İş Paketi Liderliği, Uygulama Geliştirme ve Oyunlaştırma',
+            text: 'Dahil olduğumuz AB projelerinde yalnızca süreç danışmanlığı değil, resmi proje ortağı olarak doğrudan teknik çıktı sorumluluğu üstleniyoruz. Yaygınlaştırma stratejilerine uygun web platformları ve e-öğrenme platformları kuruyor; Erasmus+ ve CoVE projeleri için çok dilli, SCORM uyumlu LMS altyapıları geliştiriyoruz. Senaryo tabanlı oyunlaştırma kurguları, dijital eğitim içerikleri ve projeye özel mobil/web uygulama geliştirme faaliyetleriyle dijital iş paketlerini uçtan uca üretiyoruz.',
             visual: 'Dijital İş Paketleri',
             image: '/images/digital-work-package-software-development.png'
           }
@@ -45,7 +73,7 @@ const pageContent = {
       },
       {
         key: 'bid-management',
-        label: '💼 Uluslararası Fonlu İhaleler ve Stratejik Teklif Yönetimi',
+        label: 'Uluslararası Fonlu İhaleler ve Stratejik Teklif Yönetimi',
         intro:
           'Yada Global; çok taraflı kalkınma bankaları ve küresel ajanslar tarafından finanse edilen uluslararası teknik yardım ve hizmet alım ihalelerinde uçtan uca stratejik danışmanlık sunmaktadır. World Bank, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France ve GTAI düzenlemelerine uygun teknik-idari şartname analizleri ile uluslararası standartlarda bid management süreçleri yönetiyoruz.',
         iconCards: [
@@ -55,19 +83,20 @@ const pageContent = {
         ],
         blocks: [
           {
-            title: '📑 Teknik Şartname Analizleri ve Teklif Stratejisi',
+            title: 'Teknik Şartname Analizleri ve Teklif Stratejisi',
             text: 'Uluslararası kuruluşların yayımladığı çok uluslu ihale dosyalarını, idari ve teknik şartnameleri derinlemesine analiz ediyoruz. Kurumunuzun küresel pazardaki ihale süreçlerine uyumunu güçlendirmek için risk analizleri, maliyet projeksiyonları, yerel mevzuat uyumluluk denetimleri ve joint venture modellerini içeren teknik ve finansal teklif stratejileri geliştiriyoruz.',
-            visual: 'Bid Strategy',
+            visual: 'Teklif Stratejisi',
             image: '/images/technical-tender-analysis-bid-management.png'
           },
           {
-            title: '🌍 Çok Taraflı Kalkınma Bankaları ve Küresel Ajansların İhale Yönetimi',
-            text: 'World Bank, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France ve GTAI gibi kuruluşların procurement prosedürlerine tam uyumlu süreç yönetimi sağlıyoruz. Akıllı şehirler, CBS, sürdürülebilir ulaşım ve dijital dönüşüm odaklı ihaleleri izleyerek firmaların ve konsorsiyumların uluslararası alımlara eksiksiz dosyalar sunmasını koordine ediyoruz.',
+            title: 'Çok Taraflı Kalkınma Bankaları ve Küresel Ajansların İhale Yönetimi',
+            text: 'Dünya Bankası, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France ve GTAI gibi kuruluşların procurement prosedürlerine tam uyumlu süreç yönetimi sağlıyoruz. Akıllı şehirler, CBS, sürdürülebilir ulaşım ve dijital dönüşüm odaklı ihaleleri izleyerek firmaların ve konsorsiyumların uluslararası alımlara eksiksiz dosyalar sunmasını koordine ediyoruz.',
+            institutions: internationalInstitutions,
             visual: 'Küresel İhale',
             image: '/images/multilateral-development-bank-procurement.png'
           },
           {
-            title: '✍️ Teknik Teklif Geliştirme ve Uluslararası Dokümantasyon Yönetimi',
+            title: 'Teknik Teklif Geliştirme ve Uluslararası Dokümantasyon Yönetimi',
             text: 'Uluslararası ihale metodolojilerine uygun technical proposal ve iş planı metinleri geliştiriyoruz. Teknik uzman özgeçmişlerinin düzenlenmesi, kurumsal referansların uluslararası formatlara uyarlanması, mali teklif şablonlarının optimizasyonu ve evaluation criteria ile tam uyumlu dokümantasyon setlerinin hazırlanması süreçlerini titizlikle yürütüyoruz.',
             visual: 'Teklif Dokümanı',
             image: '/images/technical-proposal-international-tender-documentation.png'
@@ -76,31 +105,31 @@ const pageContent = {
       },
       {
         key: 'finance',
-        label: '📈 Uluslararası Kredi, Finansman ve Yatırım Danışmanlığı',
+        label: 'Uluslararası Kredi, Finansman ve Yatırım Danışmanlığı',
         intro:
           'Yada Global; makro ölçekli akıllı şehir, altyapı, bölgesel kalkınma ve yeşil dönüşüm yatırımları için uluslararası finans kuruluşlarından uzun vadeli kredi ve fon sağlama süreçlerini yönetmektedir. Çok uluslu bankaların ve kalkınma ajanslarının normlarına uygun ticari ve teknik fizibilite raporları, finansal modellemeler ve yeşil finansman stratejileriyle büyük ölçekli yatırımları uluslararası fonlara hazır hale getiriyoruz.',
         iconCards: [
-          { icon: '🏦', title: 'Uzun Vadeli Kredi', text: 'Sovereign/non-sovereign finansman kurgularında süreç yönetimi.' },
+          { icon: '🏦', title: 'Uzun Vadeli Kredi', text: 'Kamu ve özel sektör finansman kurgularında süreç yönetimi.' },
           { icon: '📋', title: 'Fizibilite ve Modelleme', text: 'ROI, NPV, IRR bazlı finansal karar destek modelleri.' },
           { icon: '🍃', title: 'Yeşil Finansman', text: 'ESG uyumlu yatırım ve fon erişim stratejileri.' }
         ],
         blocks: [
           {
-            title: '🏦 Makro Proje Finansmanı ve Uluslararası Uzun Vadeli Kredi Yönetimi',
+            title: 'Makro Proje Finansmanı ve Uluslararası Uzun Vadeli Kredi Yönetimi',
             text: 'Belediyelerin, OSBlerin ve özel sektör yatırımcılarının büyük ölçekli altyapı, akıllı kent ve dijital dönüşüm projeleri için çok taraflı kalkınma bankalarından uzun vadeli kredi sağlama süreçlerine danışmanlık yapıyoruz. Finansman kuruluşlarının katı başvuru prosedürlerine uyumlu borçlanma stratejileri kurguluyor ve fonlama öncesi kurumsal risk analizleri gerçekleştiriyoruz.',
             visual: 'Proje Finansmanı',
             image: '/images/macro-project-finance-long-term-loans.png'
           },
           {
-            title: '📋 Ticari, Teknik Fizibilite Raporları ve Finansal Modelleme',
+            title: 'Ticari, Teknik Fizibilite Raporları ve Finansal Modelleme',
             text: 'Uluslararası finans kuruluşlarının ve bölgesel kalkınma ajanslarının kabul standartlarına uyumlu ticari ve teknik fizibilite raporları hazırlıyoruz. Yatırımların geri dönüş sürelerini, net bugünkü değerlerini ve iç verimlilik oranlarını hesaplayan dinamik finansal modelleme ve risk analizi tablolarıyla projelerin finansal sürdürülebilirliğini belgeliyoruz.',
             visual: 'Finansal Model',
             image: '/images/commercial-technical-feasibility-financial-modeling.png'
           },
           {
-            title: '🍃 Yeşil Finansman, Sürdürülebilirlik Yönetimi ve Yatırım Rehberliği',
-            text: 'Avrupa Yeşil Mutabakatı normlarıyla eşleşen yatırımlar için green finance, green bonds ve sürdürülebilirlik odaklı fon mekanizmalarına erişim stratejileri geliştiriyoruz. Yatırımcıların iklim ve çevre düzenlemelerine uyumunu koordine ederek ESG kriterlerine uygun yatırım rehberliği sunuyoruz.',
-            visual: 'Green Finance',
+            title: 'Yeşil Finansman, Sürdürülebilirlik Yönetimi ve Yatırım Rehberliği',
+            text: 'Avrupa Yeşil Mutabakatı normlarıyla uyumlu yatırımlar için yeşil finansman, yeşil tahvil ve sürdürülebilirlik odaklı fon mekanizmalarına erişim stratejileri geliştiriyoruz. Yatırımcıların iklim ve çevre düzenlemelerine uyumunu koordine ederek çevresel, sosyal ve yönetişim (ESG) kriterlerine uygun yatırım rehberliği sunuyoruz.',
+            visual: 'Yeşil Finansman',
             image: '/images/green-finance-sustainable-investment-esg.png'
           }
         ]
@@ -115,7 +144,7 @@ const pageContent = {
     tabs: [
       {
         key: 'eu-projects',
-        label: '🇪🇺 EU Projects and Consortium Management',
+        label: 'EU Projects and Consortium Management',
         intro:
           'Yada Global acts as a strategic advisor and official consortium partner in multinational EU project processes focused on R&D, innovation, green transition, vocational excellence, and smart urbanism. Under Horizon Europe, DUT, CoVE, Erasmus+ KA2, LIFE, and Digital Europe, we manage the full cycle from application strategy to implementation partner roles and final reporting.',
         iconCards: [
@@ -125,20 +154,20 @@ const pageContent = {
         ],
         blocks: [
           {
-            title: '🤝 International Consortium Management and EU Grant Advisory',
+            title: 'International Consortium Management and EU Grant Advisory',
             text: 'We closely monitor multinational calls published by the European Commission and related authorities, then design funding strategies tailored to your institution. With strong consortium building capability, we lead cross-border structures for Horizon Europe, DUT, CoVE, LIFE, and Eurostars, while managing call analysis, application strategy, administrative-financial alignment, and final reporting to EU standards.',
             visual: 'EU Consortium',
             image: '/images/international-consortium-management-eu-grants.png'
           },
           {
-            title: '🎓 Erasmus+ KA2 Strategic Partnerships and Process Management',
+            title: 'Erasmus+ KA2 Strategic Partnerships and Process Management',
             text: 'We support institutions in joining the right consortia and coordinating Erasmus+ KA2 strategic partnership projects across education, youth, urban awareness, and institutional capacity development. We plan transnational meetings and LTT activities, and ensure administrative and financial workflows are executed in full compliance with European Commission norms.',
             visual: 'Erasmus+ KA2',
             image: '/images/erasmus-ka2-strategic-partnerships.png'
           },
           {
-            title: '💻 Digital Work Package Leadership, Application Development, and Gamification',
-            text: 'In EU projects, we do more than process advisory: we join consortia as an official partner and take responsibility for technical work packages. We establish dissemination-ready web platforms, deliver multilingual SCORM-compliant LMS environments for Erasmus+ and CoVE, and create scenario-based gamification with project-specific mobile/web applications, AI-enabled algorithms, and GIS-driven analytics outputs.',
+            title: 'Digital Work Package Leadership, Application Development, and Gamification',
+            text: 'In the EU projects we participate in, we take on direct responsibility for technical outputs as official project partners, rather than providing process consultancy alone. We develop web platforms and e-learning platforms aligned with dissemination strategies, as well as multilingual, SCORM-compliant LMS infrastructures for Erasmus+ and CoVE projects. Through scenario-based gamification, digital learning content, and project-specific mobile/web application development, we deliver digital work packages from end to end.',
             visual: 'Digital Work Packages',
             image: '/images/digital-work-package-software-development.png'
           }
@@ -146,7 +175,7 @@ const pageContent = {
       },
       {
         key: 'bid-management',
-        label: '💼 International Tenders and Strategic Bid Management',
+        label: 'International Tenders and Strategic Bid Management',
         intro:
           'Yada Global provides end-to-end strategic advisory for international technical assistance and service procurement tenders financed by multilateral development banks and global agencies. We run bid management in line with World Bank, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France, and GTAI regulations through rigorous technical and administrative specification analysis.',
         iconCards: [
@@ -156,19 +185,20 @@ const pageContent = {
         ],
         blocks: [
           {
-            title: '📑 Technical Specification Analysis and Bid Strategy',
+            title: 'Technical Specification Analysis and Bid Strategy',
             text: 'We analyze multinational tender files and technical-administrative specifications in depth. To strengthen your competitiveness in global procurement, we design technical and financial bid strategies covering risk analysis, cost projections, local compliance reviews, and joint venture model structuring.',
             visual: 'Bid Strategy',
             image: '/images/technical-tender-analysis-bid-management.png'
           },
           {
-            title: '🌍 Tender Management for Multilateral Banks and Global Agencies',
+            title: 'Tender Management for Multilateral Banks and Global Agencies',
             text: 'We ensure process execution in full alignment with procurement guidelines of institutions such as the World Bank, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France, and GTAI. We track global tenders in smart cities, GIS, sustainable mobility, and digital transformation, coordinating complete submissions from firms and consortia.',
+            institutions: internationalInstitutionsEn,
             visual: 'Global Tendering',
             image: '/images/multilateral-development-bank-procurement.png'
           },
           {
-            title: '✍️ Technical Proposal Development and International Documentation Management',
+            title: 'Technical Proposal Development and International Documentation Management',
             text: 'We prepare technical proposal narratives and work plans in line with international tender methodologies. Our delivery includes expert CV formatting, adaptation of institutional track records to global formats, financial template optimization, and complete documentation sets aligned with the contracting authority evaluation criteria.',
             visual: 'Proposal Development',
             image: '/images/technical-proposal-international-tender-documentation.png'
@@ -177,7 +207,7 @@ const pageContent = {
       },
       {
         key: 'finance',
-        label: '📈 International Credit, Financing, and Investment Advisory',
+        label: 'International Credit, Financing, and Investment Advisory',
         intro:
           'Yada Global manages long-term credit and fund access processes for macro-scale investments in smart cities, infrastructure, regional development, and green transition. Through bank-grade feasibility studies, financial modeling, and green finance strategies aligned with multilateral institutions and development agencies, we prepare large investments for international funding.',
         iconCards: [
@@ -187,19 +217,19 @@ const pageContent = {
         ],
         blocks: [
           {
-            title: '🏦 Macro Project Finance and International Long-Term Credit Management',
+            title: 'Macro Project Finance and International Long-Term Credit Management',
             text: 'We advise municipalities, organized industrial zones, and private investors on obtaining long-term financing from multilateral development banks and global funds for large infrastructure, smart city, and digital transformation investments. We design borrowing strategies compatible with strict lender requirements and conduct institutional risk analysis before funding rounds.',
             visual: 'Project Finance',
             image: '/images/macro-project-finance-long-term-loans.png'
           },
           {
-            title: '📋 Commercial and Technical Feasibility Reports and Financial Modeling',
+            title: 'Commercial and Technical Feasibility Reports and Financial Modeling',
             text: 'We produce commercial and technical feasibility studies aligned with acceptance standards of international financial institutions and regional development agencies. Through dynamic modeling and risk analytics that calculate ROI, NPV, and IRR, we document the financial sustainability of investment programs to global standards.',
             visual: 'Financial Modeling',
             image: '/images/commercial-technical-feasibility-financial-modeling.png'
           },
           {
-            title: '🍃 Green Finance, Sustainability Management, and Investment Guidance',
+            title: 'Green Finance, Sustainability Management, and Investment Guidance',
             text: 'For investments aligned with the European Green Deal, we design access strategies for green finance instruments, green bonds, and sustainability-focused funds. We coordinate climate and environmental compliance while guiding investors toward ESG-compatible funding criteria and long-term value positioning.',
             visual: 'Green Finance',
             image: '/images/green-finance-sustainable-investment-esg.png'
@@ -247,6 +277,9 @@ const getBlockVisualStyle = (block) => {
         <h1>{{ localizedContent.title }}</h1>
         <p>{{ localizedContent.description }}</p>
       </div>
+      <div class="digital-tech-hero-img-wrap" aria-hidden="true">
+        <img src="/images/internationalbanner.png" alt="" class="digital-tech-hero-img" />
+      </div>
     </header>
 
     <nav class="digital-tech-tabs" aria-label="Uluslararası projeler sekmeleri">
@@ -265,7 +298,9 @@ const getBlockVisualStyle = (block) => {
     <transition name="digital-panel" mode="out-in">
       <article :key="currentTab.key" class="digital-tech-panel">
         <header class="digital-tech-panel-header">
-          <h2>{{ currentTab.label }}</h2>
+          <div class="digital-tech-panel-heading">
+            <h2>{{ currentTab.label }}</h2>
+          </div>
           <p>{{ currentTab.intro }}</p>
         </header>
 
@@ -278,13 +313,27 @@ const getBlockVisualStyle = (block) => {
         </section>
 
         <section class="digital-tech-blocks">
-          <article v-for="block in currentTab.blocks" :key="block.title" class="digital-tech-block">
+          <article v-for="(block, index) in currentTab.blocks" :key="block.title" class="digital-tech-block">
+            <div class="digital-tech-block-content">
+              <span class="digital-tech-block-number" aria-hidden="true">{{ String(index + 1).padStart(2, '0') }}</span>
+              <div class="digital-tech-block-copy">
+                <h3>{{ block.title }}</h3>
+                <p>{{ block.text }}</p>
+                <section v-if="block.institutions" class="international-institutions" aria-labelledby="international-institutions-title">
+                  <h4 id="international-institutions-title">
+                    {{ locale === 'tr' ? 'Uluslararası Kuruluşlar' : 'International Institutions' }}
+                  </h4>
+                  <ul>
+                    <li v-for="institution in block.institutions" :key="institution">{{ institution }}</li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+            <div class="digital-tech-block-timeline" aria-hidden="true">
+              <span class="digital-tech-block-timeline-line"></span>
+            </div>
             <div class="digital-tech-block-visual" :style="getBlockVisualStyle(block)" aria-hidden="true">
               <span class="digital-tech-visual-pill">{{ block.visual }}</span>
-            </div>
-            <div class="digital-tech-block-copy">
-              <h3>{{ block.title }}</h3>
-              <p>{{ block.text }}</p>
             </div>
           </article>
         </section>

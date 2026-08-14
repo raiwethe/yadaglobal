@@ -10,7 +10,7 @@ const pageContent = {
     kicker: 'ÇÖZÜMLERİMİZ',
     title: 'DİJİTAL TEKNOLOJİLER VE YAZILIM ÇÖZÜMLERİ',
     description:
-      'Coğrafi veri zekası, yapay zeka mühendisliği ve siber güvenlik denetimini tek bir stratejik çatıda birleştirerek kurumlara ölçeklenebilir dijital dönüşüm altyapısı sunuyoruz.',
+      'Yada Global  coğrafi veri zekâsı, yapay zekâ mühendisliği, yazılım geliştirme ve siber güvenlik denetimini tek bir stratejik çatı altında birleştirerek kurumlara ölçeklenebilir ve güvenilir dijital dönüşüm altyapıları sunuyoruz. Veriyi anlamlandıran, süreçleri dijitalleştiren ve kurumların karar alma kapasitesini güçlendiren teknoloji çözümleri geliştiriyor; kamu, yerel yönetimler ve özel sektör için ihtiyaçlara özel, sürdürülebilir ve güvenli dijital sistemler tasarlıyoruz. Modern teknolojileri kurumsal ihtiyaçlarla buluşturarak, bugünün operasyonlarını iyileştiren ve geleceğin dijital altyapılarına uyum sağlayan çözümler üretiyoruz.',
     tabs: [
       {
         key: 'gis',
@@ -18,14 +18,14 @@ const pageContent = {
         intro:
           'Yada Global; Coğrafi Bilgi Sistemleri (CBS) ve Uzaktan Algılama teknolojilerinde uçtan uca çözümler sunan lider bir teknoloji firmasıdır. Büyük mekansal verileri ileri düzey analitik yöntemlerle işleyerek; kamu politikalarını yönlendiren akıllı kentsel modeller ve özel sektör yatırımlarına yön veren lokasyon analitiği çözümleri üretiyoruz.',
         iconCards: [
-          { icon: '🗺️', title: 'Mekansal Karar Desteği', text: 'Veriyi karar mekanizmalarına taşıyan GIS analitik akışları.' },
+          { icon: '🗺️', title: 'Mekansal Karar Desteği', text: 'Veriyi karar mekanizmalarına taşıyan CBS analitik akışları.' },
           { icon: '🛰️', title: 'Uzaktan Algılama', text: 'Uydu ve radar verisinden zaman serisi tabanlı içgörüler.' },
           { icon: '📍', title: 'Lokasyon Zekası', text: 'Yatırım, operasyon ve büyüme kararları için konumsal modelleme.' }
         ],
         blocks: [
           {
             title: 'Mekansal Veri Analitiği, Modelleme ve CBS Çözümleri',
-            text: 'Kamu kurumları ve yerel yönetimlerin ham mekansal verilerini gelişmiş algoritmalara dayalı GIS analizi yöntemleriyle işliyoruz. Kentsel büyüme projeksiyonları, afet risk senaryoları, lojistik ağ optimizasyonları ve mekansal veri tabanı tasarımları ile geleceğe yönelik sürdürülebilir tahmin modelleri üretiyoruz.',
+            text: 'Kamu kurumları ve yerel yönetimlerin ham mekansal verilerini gelişmiş algoritmalara dayalı CBS analizi yöntemleriyle işliyoruz. Kentsel büyüme projeksiyonları, afet risk senaryoları, lojistik ağ optimizasyonları ve mekansal veri tabanı tasarımları ile geleceğe yönelik sürdürülebilir tahmin modelleri üretiyoruz.',
             visual: 'Mekansal Zeka',
             image: '/images/gis-spatial-data-analytics.png'
           },
@@ -48,9 +48,9 @@ const pageContent = {
             image: '/images/investment-site-selection-spatial-risk-analysis.png'
           },
           {
-            title: 'Web-GIS Tabanlı Yönetim Portalları ve Sistem Entegrasyonu',
-            text: 'Kamu ve özel sektör kuruluşlarının coğrafi veri tabanlarını merkezi yapıda topluyoruz. Tarayıcı tabanlı harita yönetimi, sorgulama ve dinamik görselleştirme için ölçeklenebilir Web-GIS portalları ve bulut altyapıları kurguluyoruz.',
-            visual: 'Web GIS',
+            title: 'Web-CBS Tabanlı Yönetim Portalları ve Sistem Entegrasyonu',
+            text: 'Kamu ve özel sektör kuruluşlarının coğrafi veri tabanlarını merkezi yapıda topluyoruz. Tarayıcı tabanlı harita yönetimi, sorgulama ve dinamik görselleştirme için ölçeklenebilir Web-CBS portalları ve bulut altyapıları kurguluyoruz.',
+            visual: 'Web CBS',
             image: '/images/web-gis-management-system-integration.png'
           },
           {
@@ -81,7 +81,7 @@ const pageContent = {
           {
             title: 'AI Entegreli Özel Kurumsal Yazılım Çözümleri ve SaaS Mimarisi',
             text: 'Şirketlerin ve kamu organizasyonlarının geleneksel iş akışlarını akıllı algoritmalarla otomatize eden kurumsal yazılım çözümleri üretiyoruz. LLM ve derin öğrenme entegrasyonlarına sahip bulut tabanlı SaaS mimarileriyle dijital dönüşüm süreçlerini hızlandırıyoruz.',
-            visual: 'Bulut Yerel',
+            visual: 'AI Entegrasyonu',
             image: '/images/ai-enterprise-software-saas.png'
           },
           {
@@ -117,7 +117,7 @@ const pageContent = {
           },
           {
             title: 'Mekansal Veri ve Dijital İkiz Sızma Testleri',
-            text: 'Kadastro, mülkiyet ve altyapı harita veri tabanlarının siber dayanıklılığını denetliyoruz. Web-GIS portalları ve dijital ikiz platformlarının API, entegrasyon ve yetkilendirme açıklarını tespit ederek teknik bulguları raporluyoruz.',
+            text: 'Kadastro, mülkiyet ve altyapı harita veri tabanlarının siber dayanıklılığını denetliyoruz. Web-CBS portalları ve dijital ikiz platformlarının API, entegrasyon ve yetkilendirme açıklarını tespit ederek teknik bulguları raporluyoruz.',
             visual: 'Dijital İkiz Güvenliği',
             image: '/images/gis-digital-twin-penetration-testing.png'
           },
@@ -141,7 +141,7 @@ const pageContent = {
     kicker: 'Our Solutions',
     title: 'DIGITAL TECHNOLOGIES AND SOFTWARE SOLUTIONS',
     description:
-      'We combine geospatial intelligence, AI engineering, and cybersecurity assurance under one strategic framework to deliver scalable digital transformation infrastructure for institutions.',
+      'At Yada Global we combine geographic data intelligence, artificial intelligence engineering, software development, and cybersecurity auditing under a single strategic umbrella to provide organizations with scalable and reliable digital transformation infrastructures. We develop technology solutions that make sense of data, digitize processes, and strengthen organizations\' decision-making capacity; we design customized, sustainable, and secure digital systems for the public sector, local governments, and the private sector. By bringing together modern technologies with corporate needs, we create solutions that improve today\'s operations and adapt to the digital infrastructures of the future.',
     tabs: [
       {
         key: 'gis',
@@ -212,7 +212,7 @@ const pageContent = {
           {
             title: 'AI-Integrated Custom Enterprise Software and SaaS Architecture',
             text: 'We design custom enterprise software that modernizes legacy workflows through intelligent automation. With LLM and deep-learning integrations, our cloud-native SaaS architectures increase agility and speed up digital transformation delivery.',
-            visual: 'Cloud Native',
+            visual: 'AI Integration',
             image: '/images/ai-enterprise-software-saas.png'
           },
           {
@@ -307,6 +307,9 @@ const getBlockVisualStyle = (block) => {
         <h1>{{ localizedContent.title }}</h1>
         <p>{{ localizedContent.description }}</p>
       </div>
+      <div class="digital-tech-hero-img-wrap" aria-hidden="true">
+        <img src="/images/digitalbanner.png" alt="" class="digital-tech-hero-img" />
+      </div>
     </header>
 
     <nav class="digital-tech-tabs" aria-label="Dijital teknoloji sekmeleri">
@@ -325,7 +328,9 @@ const getBlockVisualStyle = (block) => {
     <transition name="digital-panel" mode="out-in">
       <article :key="currentTab.key" class="digital-tech-panel">
         <header class="digital-tech-panel-header">
-          <h2>{{ currentTab.label }}</h2>
+          <div class="digital-tech-panel-heading">
+            <h2>{{ currentTab.label }}</h2>
+          </div>
           <p>{{ currentTab.intro }}</p>
         </header>
 
@@ -338,13 +343,19 @@ const getBlockVisualStyle = (block) => {
         </section>
 
         <section class="digital-tech-blocks">
-          <article v-for="block in currentTab.blocks" :key="block.title" class="digital-tech-block">
+          <article v-for="(block, index) in currentTab.blocks" :key="block.title" class="digital-tech-block">
+            <div class="digital-tech-block-content">
+              <span class="digital-tech-block-number" aria-hidden="true">{{ String(index + 1).padStart(2, '0') }}</span>
+              <div class="digital-tech-block-copy">
+                <h3>{{ block.title }}</h3>
+                <p>{{ block.text }}</p>
+              </div>
+            </div>
+            <div class="digital-tech-block-timeline" aria-hidden="true">
+              <span class="digital-tech-block-timeline-line"></span>
+            </div>
             <div class="digital-tech-block-visual" :style="getBlockVisualStyle(block)" aria-hidden="true">
               <span class="digital-tech-visual-pill">{{ block.visual }}</span>
-            </div>
-            <div class="digital-tech-block-copy">
-              <h3>{{ block.title }}</h3>
-              <p>{{ block.text }}</p>
             </div>
           </article>
         </section>

@@ -12,16 +12,39 @@ const searchDropdownRef = ref(null)
 
 const currentLang = computed(() => locale.value.toUpperCase())
 
-// Normalize Turkish special chars + lowercase for accent-insensitive search
+// Normalize Turkish casing and accents so i, ı, İ, and I match consistently.
 const normalize = (str) =>
-  str
-    .toLowerCase()
-    .replace(/[ıİ]/g, 'i')
-    .replace(/[çÇ]/g, 'c')
-    .replace(/[ğĞ]/g, 'g')
-    .replace(/[öÖ]/g, 'o')
-    .replace(/[şŞ]/g, 's')
-    .replace(/[üÜ]/g, 'u')
+  String(str ?? '')
+    .replace(/[İIı]/g, 'i')
+    .toLocaleLowerCase('en-US')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+
+const projectSearchItems = {
+  tr: [
+    { title: 'SHORE', subtitle: 'Çevre Bilinci ve Eylemi için Okyanus Okuryazarlığı', to: '/projeler-ve-referanslar/shore', keywords: ['okyanus', 'eğitim', 'iş birliği'] },
+    { title: 'Cizre Tarih, Kültür, İnanç Turizm Rotalarının Oluşturulması', subtitle: 'Turizm Master Planı', to: '/projeler-ve-referanslar/cizre', keywords: ['cizre', 'turizm', 'rota'] },
+    { title: 'Şiran Kuzey-Güney Koridoru Yaratıcı Turizm Konsept Master Planı', subtitle: 'Turizm Master Planı', to: '/projeler-ve-referanslar/siran1', keywords: ['şiran', 'turizm', 'master plan'] },
+    { title: 'Artabel Gölleri Tabiat Parkı Yaratıcı Turizm Konsept Master Planı', subtitle: 'Turizm Master Planı', to: '/projeler-ve-referanslar/artabel-golleri', keywords: ['artabel', 'doğa', 'turizm'] },
+    { title: 'Sürmene Yeniçam Tersane Alanı Gelişim ve İyileştirme Çalışması', subtitle: 'OSB Geliştirme', to: '/projeler-ve-referanslar/surmene', keywords: ['sürmene', 'tersane', 'osb', 'üretim'] },
+    { title: 'Kapıdağ Yarımadası Tematik Planlama, Bağlamsal Tasarım ve Vizyon Oluşturma Projesi', subtitle: 'Tematik Planlama', to: '/projeler-ve-referanslar/kapidag', keywords: ['kapıdağ', 'tematik planlama', 'vizyon'] },
+    { title: 'Gelibolu Merkezi Yaratıcı Turizm Konsept Planları', subtitle: 'Turizm Master Planı', to: '/projeler-ve-referanslar/gelibolu', keywords: ['gelibolu', 'turizm', 'konsept'] },
+    { title: 'Çanakkale Biga Ramazanlar Mahallesi GES Planlama ve Sürdürülebilirlik Danışmanlığı', subtitle: 'Mekânsal Planlama ve Teknik Danışmanlık', to: '/projeler-ve-referanslar/biga', keywords: ['biga', 'ges', 'güneş enerjisi', 'sürdürülebilirlik', 'ramazanlar'] },
+    { title: 'Dijital Portföy', subtitle: 'Dijital Portföy Yönetim Hizmeti', to: '/projeler-ve-referanslar/digital', keywords: ['dijital', 'portföy', 'veri'] },
+    { title: 'Dijital İkiz', subtitle: 'Dijital İkiz Yönetim Hizmeti', to: '/projeler-ve-referanslar/digitalikiz', keywords: ['dijital ikiz', 'veri', 'modelleme'] }
+  ],
+  en: [
+    { title: 'SHORE', subtitle: 'Ocean Literacy for Environmental Awareness and Action', to: '/projeler-ve-referanslar/shore', keywords: ['ocean', 'education', 'collaboration'] },
+    { title: 'Creating Historical, Cultural, and Faith Tourism Routes in Cizre', subtitle: 'Tourism Master Plan', to: '/projeler-ve-referanslar/cizre', keywords: ['cizre', 'tourism', 'routes'] },
+    { title: 'Artabel Lakes Nature Park Creative Tourism Concept Master Plan', subtitle: 'Tourism Master Plan', to: '/projeler-ve-referanslar/artabel-golleri', keywords: ['artabel', 'nature', 'tourism'] },
+    { title: 'Sürmene Yeniçam Shipyard Area Development and Improvement Study', subtitle: 'OIZ Development', to: '/projeler-ve-referanslar/surmene', keywords: ['sürmene', 'shipyard', 'oiz', 'production'] },
+    { title: 'Kapıdağ Peninsula Thematic Planning, Contextual Design and Vision Creation Project', subtitle: 'Thematic Planning', to: '/projeler-ve-referanslar/kapidag', keywords: ['kapidag', 'thematic planning', 'vision'] },
+    { title: 'Gelibolu Center Creative Tourism Concept Plans', subtitle: 'Tourism Master Plan', to: '/projeler-ve-referanslar/gelibolu', keywords: ['gelibolu', 'tourism', 'concept'] },
+    { title: 'Çanakkale Biga Ramazanlar Solar Power Plant Planning and Sustainability Advisory', subtitle: 'Spatial Planning and Technical Advisory', to: '/projeler-ve-referanslar/biga', keywords: ['biga', 'solar power', 'spp', 'sustainability', 'ramazanlar'] },
+    { title: 'Digital Portfolio', subtitle: 'Digital Portfolio Management Service', to: '/projeler-ve-referanslar/digital', keywords: ['digital', 'portfolio', 'data'] },
+    { title: 'Digital Twin', subtitle: 'Digital Twin Management Service', to: '/projeler-ve-referanslar/digitalikiz', keywords: ['digital twin', 'data', 'modeling'] }
+  ]
+}
 
 const searchIndex = computed(() => {
   if (locale.value === 'tr') {
@@ -39,7 +62,8 @@ const searchIndex = computed(() => {
       { title: 'Uluslararası Projeler ve Stratejik Finansman', subtitle: 'Ana hizmet sayfası', to: '/uluslararasi-projeler-ve-stratejik-finansman', keywords: ['uluslararası', 'proje', 'finansman'] },
       { title: 'Avrupa Birliği Projeleri ve Konsorsiyum Yönetimi', subtitle: 'Uluslararası Projeler › AB / Horizon', to: '/uluslararasi-projeler-ve-stratejik-finansman', tab: 'eu-projects', keywords: ['AB', 'Avrupa', 'Horizon', 'Erasmus', 'konsorsiyum', 'hibe', 'LIFE', 'Interreg', 'DUT', 'CoVE', 'EUREKA'] },
       { title: 'Uluslararası Fonlu İhaleler ve Stratejik Teklif Yönetimi', subtitle: 'Uluslararası Projeler › İhale / Teklif', to: '/uluslararasi-projeler-ve-stratejik-finansman', tab: 'bid-management', keywords: ['ihale', 'teklif', 'World Bank', 'UNDP', 'EBRD', 'GIZ', 'ICMPD', 'bid', 'tender', 'procurement'] },
-      { title: 'Uluslararası Kredi, Finansman ve Yatırım Danışmanlığı', subtitle: 'Uluslararası Projeler › Kredi / Yatırım', to: '/uluslararasi-projeler-ve-stratejik-finansman', tab: 'finance', keywords: ['kredi', 'yatırım', 'fizibilite', 'yeşil finansman', 'EIB', 'IsDB', 'NPV', 'IRR', 'ROI', 'green bond', 'ESG'] }
+      { title: 'Uluslararası Kredi, Finansman ve Yatırım Danışmanlığı', subtitle: 'Uluslararası Projeler › Kredi / Yatırım', to: '/uluslararasi-projeler-ve-stratejik-finansman', tab: 'finance', keywords: ['kredi', 'yatırım', 'fizibilite', 'yeşil finansman', 'EIB', 'IsDB', 'NPV', 'IRR', 'ROI', 'green bond', 'ESG'] },
+      ...projectSearchItems.tr
     ]
   }
 
@@ -57,7 +81,8 @@ const searchIndex = computed(() => {
     { title: 'International Projects and Strategic Finance', subtitle: 'Main service page', to: '/uluslararasi-projeler-ve-stratejik-finansman', keywords: ['international', 'project', 'finance'] },
     { title: 'EU Projects and Consortium Management', subtitle: 'International Projects › EU / Horizon', to: '/uluslararasi-projeler-ve-stratejik-finansman', tab: 'eu-projects', keywords: ['EU', 'Europe', 'Horizon', 'Erasmus', 'consortium', 'grant', 'LIFE', 'Interreg', 'DUT', 'CoVE', 'EUREKA'] },
     { title: 'International Tenders and Strategic Bid Management', subtitle: 'International Projects › Tenders', to: '/uluslararasi-projeler-ve-stratejik-finansman', tab: 'bid-management', keywords: ['tender', 'bid', 'World Bank', 'UNDP', 'EBRD', 'GIZ', 'ICMPD', 'procurement', 'proposal'] },
-    { title: 'International Credit, Financing, and Investment Advisory', subtitle: 'International Projects › Finance', to: '/uluslararasi-projeler-ve-stratejik-finansman', tab: 'finance', keywords: ['credit', 'investment', 'feasibility', 'green finance', 'EIB', 'IsDB', 'NPV', 'IRR', 'ROI', 'green bond', 'ESG'] }
+    { title: 'International Credit, Financing, and Investment Advisory', subtitle: 'International Projects › Finance', to: '/uluslararasi-projeler-ve-stratejik-finansman', tab: 'finance', keywords: ['credit', 'investment', 'feasibility', 'green finance', 'EIB', 'IsDB', 'NPV', 'IRR', 'ROI', 'green bond', 'ESG'] },
+    ...projectSearchItems.en
   ]
 })
 
@@ -290,6 +315,7 @@ onBeforeUnmount(() => {
       </router-link>
 
       <nav class="main-nav" aria-label="Main navigation">
+        <router-link to="/" class="nav-link">{{ translate('nav.home') }}</router-link>
         <button type="button" class="nav-link" @click="scrollToAbout">{{ translate('nav.about') }}</button>
         <div class="nav-dropdown">
           <router-link to="/services" class="nav-link nav-link-dropdown">
