@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount, watchEffect } from 'vue'
 import { useRouter } from 'vue-router'
 import { locale, translate, setLocale } from './i18n.js'
 
@@ -7,10 +7,31 @@ const router = useRouter()
 const searchOpen = ref(false)
 const searchQuery = ref('')
 const langOpen = ref(false)
+const mobileMenuOpen = ref(false)
 const langDropdownRef = ref(null)
 const searchDropdownRef = ref(null)
 
 const currentLang = computed(() => locale.value.toUpperCase())
+
+const pageSeo = computed(() => {
+  const isEnglish = locale.value === 'en'
+  const path = router.currentRoute.value.path
+  const pages = isEnglish
+    ? {
+        '/': ['Yada Global | Digital Technologies, Smart Cities and International Projects', 'Yada Global develops digital technologies, smart city solutions, and international project advisory services.'],
+        '/services': ['Services | Yada Global', 'Explore Yada Global advisory, technology, and project development services.'],
+        '/contact': ['Contact | Yada Global', 'Contact Yada Global for projects, partnerships, and institutional solution advisory.'],
+        '/projeler-ve-referanslar': ['Projects and References | Yada Global', 'Explore Yada Global projects, references, and international partnerships.']
+      }
+    : {
+        '/': ['Yada Global | Dijital Teknolojiler, Akıllı Kentler ve Uluslararası Projeler', 'Yada Global dijital teknolojiler, akıllı kent çözümleri ve uluslararası proje danışmanlığı sunar.'],
+        '/services': ['Hizmetlerimiz | Yada Global', 'Yada Global danışmanlık, teknoloji ve proje geliştirme hizmetlerini keşfedin.'],
+        '/contact': ['İletişim | Yada Global', 'Projeler, iş birlikleri ve kurumsal çözümler için Yada Global ile iletişime geçin.'],
+        '/projeler-ve-referanslar': ['Projeler ve Referanslar | Yada Global', 'Yada Global projelerini, referanslarını ve uluslararası iş birliklerini inceleyin.']
+      }
+
+  return pages[path] ?? (isEnglish ? pages['/'] : pages['/'])
+})
 
 // Normalize Turkish casing and accents so i, ı, İ, and I match consistently.
 const normalize = (str) =>
@@ -285,6 +306,42 @@ const setLanguage = (lang) => {
   langOpen.value = false
 }
 
+const setMobileMenu = (open) => {
+  mobileMenuOpen.value = open
+  document.body.classList.toggle('mobile-menu-open', open)
+}
+
+const closeMobileMenu = () => setMobileMenu(false)
+
+watchEffect(() => {
+  document.documentElement.lang = locale.value
+  document.title = pageSeo.value[0]
+
+  const description = document.querySelector('meta[name="description"]')
+  if (description) description.setAttribute('content', pageSeo.value[1])
+
+  const canonicalUrl = `${window.location.origin}${router.currentRoute.value.path}`
+  const ensureLink = (rel, hreflang, href) => {
+    const selector = `link[rel="${rel}"][hreflang="${hreflang}"]`
+    let link = document.querySelector(selector)
+    if (!link) {
+      link = document.createElement('link')
+      link.rel = rel
+      link.hreflang = hreflang
+      document.head.appendChild(link)
+    }
+    link.href = href
+  }
+
+  ensureLink('alternate', 'tr', canonicalUrl)
+  ensureLink('alternate', 'en', canonicalUrl)
+
+  const ogTitle = document.querySelector('meta[property="og:title"]')
+  if (ogTitle) ogTitle.setAttribute('content', pageSeo.value[0])
+  const ogDescription = document.querySelector('meta[property="og:description"]')
+  if (ogDescription) ogDescription.setAttribute('content', pageSeo.value[1])
+})
+
 const scrollToAbout = (event) => {
   event.preventDefault()
   if (router.currentRoute.value.path === '/') {
@@ -304,6 +361,7 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   document.removeEventListener('click', handleDocumentClick)
+  document.body.classList.remove('mobile-menu-open')
 })
 </script>
 
@@ -311,14 +369,19 @@ onBeforeUnmount(() => {
   <div class="app-shell">
     <header class="page-header">
       <router-link to="/" class="brand-logo">
-        <img src="https://yadaglb.com/wp-content/uploads/2020/12/yada2-2.png" alt="YADA GLOBAL" class="brand-logo-image" />
+        <img src="https://yadaglb.com/wp-content/uploads/2020/12/yada2-2.png" alt="YADA GLOBAL" width="800" height="318" class="brand-logo-image" />
       </router-link>
 
-      <nav class="main-nav" aria-label="Main navigation">
-        <router-link to="/" class="nav-link">{{ translate('nav.home') }}</router-link>
-        <button type="button" class="nav-link" @click="scrollToAbout">{{ translate('nav.about') }}</button>
+      <button class="mobile-menu-toggle" type="button" :aria-expanded="mobileMenuOpen" aria-controls="main-navigation" aria-label="Toggle navigation" @click="setMobileMenu(!mobileMenuOpen)">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div v-if="mobileMenuOpen" class="mobile-menu-backdrop" aria-hidden="true" @click="closeMobileMenu"></div>
+      <nav id="main-navigation" class="main-nav" :class="{ 'is-open': mobileMenuOpen }" aria-label="Main navigation">
+        <router-link to="/" class="nav-link" @click="closeMobileMenu">{{ translate('nav.home') }}</router-link>
+        <button type="button" class="nav-link" @click="scrollToAbout(); closeMobileMenu()">{{ translate('nav.about') }}</button>
         <div class="nav-dropdown">
-          <router-link to="/services" class="nav-link nav-link-dropdown">
+          <router-link to="/services" class="nav-link nav-link-dropdown" @click="closeMobileMenu">
             {{ translate('nav.services') }}
             <span aria-hidden="true">▾</span>
           </router-link>
@@ -329,13 +392,14 @@ onBeforeUnmount(() => {
               :to="item.to"
               class="nav-dropdown-item"
               role="menuitem"
+              @click="closeMobileMenu"
             >
               {{ item.label }}
             </router-link>
           </div>
         </div>
-        <router-link to="/projeler-ve-referanslar" class="nav-link">{{ translate('nav.projects') }}</router-link>
-        <router-link to="/contact" class="nav-link">{{ translate('nav.contact') }}</router-link>
+        <router-link to="/projeler-ve-referanslar" class="nav-link" @click="closeMobileMenu">{{ translate('nav.projects') }}</router-link>
+        <router-link to="/contact" class="nav-link" @click="closeMobileMenu">{{ translate('nav.contact') }}</router-link>
       </nav>
 
       <div class="header-tools">
@@ -390,7 +454,7 @@ onBeforeUnmount(() => {
 
       <div class="site-footer-grid">
         <section class="footer-brand-col">
-          <img src="https://yadaglb.com/wp-content/uploads/2020/12/yada2-2.png" alt="YADA GLOBAL" class="footer-logo" />
+          <img src="https://yadaglb.com/wp-content/uploads/2020/12/yada2-2.png" alt="YADA GLOBAL" width="800" height="318" class="footer-logo" />
           <p>{{ translate('contactPage.description') }}</p>
           <div class="footer-related-links">
             <router-link to="/services" class="footer-related-item">
