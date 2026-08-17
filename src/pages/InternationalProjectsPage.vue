@@ -90,7 +90,7 @@ const pageContent = {
           },
           {
             title: 'Çok Taraflı Kalkınma Bankaları ve Küresel Ajansların İhale Yönetimi',
-            text: 'Dünya Bankası, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France ve GTAI gibi kuruluşların procurement prosedürlerine tam uyumlu süreç yönetimi sağlıyoruz. Akıllı şehirler, CBS, sürdürülebilir ulaşım ve dijital dönüşüm odaklı ihaleleri izleyerek firmaların ve konsorsiyumların uluslararası alımlara eksiksiz dosyalar sunmasını koordine ediyoruz.',
+            text: 'Dünya Bankası, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France ve GTAI gibi kuruluşların procurement prosedürlerine tam uyumlu süreç yönetimi sağlıyoruz. Talep ettiğiniz sektördeki ihaleleri izleyerek firmaların ve konsorsiyumların uluslararası alımlara eksiksiz dosyalar sunmasını koordine ediyoruz.',
             institutions: internationalInstitutions,
             visual: 'Küresel İhale',
             image: '/images/multilateral-development-bank-procurement.png'
@@ -192,7 +192,7 @@ const pageContent = {
           },
           {
             title: 'Tender Management for Multilateral Banks and Global Agencies',
-            text: 'We ensure process execution in full alignment with procurement guidelines of institutions such as the World Bank, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France, and GTAI. We track global tenders in smart cities, GIS, sustainable mobility, and digital transformation, coordinating complete submissions from firms and consortia.',
+            text: 'We ensure process execution in full alignment with procurement guidelines of institutions such as the World Bank, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France, and GTAI. By monitoring tenders in your sector of interest, we coordinate the submission of complete bid packages by companies and consortia for international procurement processes.',
             institutions: internationalInstitutionsEn,
             visual: 'Global Tendering',
             image: '/images/multilateral-development-bank-procurement.png'

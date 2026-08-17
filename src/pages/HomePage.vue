@@ -142,7 +142,14 @@ const selectAboutSection = (key) => {
       <div class="hero-grid">
         <article v-for="card in heroCards" :key="card.titleKeys.join('-')" class="hero-card">
           <router-link :to="card.link" class="hero-link">
-            <div class="hero-image" :style="{ backgroundImage: `url(${card.image})` }"></div>
+            <div class="hero-image">
+              <img
+                :src="card.image"
+                :alt="translate(card.titleKeys[0])"
+                :loading="card === heroCards[0] ? 'eager' : 'lazy'"
+                :fetchpriority="card === heroCards[0] ? 'high' : 'low'"
+              />
+            </div>
             <div class="hero-overlay">
               <h2 class="hero-title">
                 <template v-for="key in card.titleKeys" :key="key">

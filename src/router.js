@@ -26,6 +26,9 @@ import ProjectKapidagThematicPage from './pages/ProjectKapidagThematicPage.vue'
 import ProjectKapidag2Page from './pages/ProjectKapidag2Page.vue'
 import ProjectGelibolouPage from './pages/ProjectGelibolouPage.vue'
 import ProjectBigaPage from './pages/ProjectBigaPage.vue'
+import ProjectKinikPage from './pages/ProjectKinikPage.vue'
+import ProjectAsagikepenPage from './pages/ProjectAsagikepenPage.vue'
+import ProjectKoltanPage from './pages/ProjectKoltanPage.vue'
 
 const routes = [
   { path: '/', name: 'home', component: HomePage },
@@ -79,6 +82,9 @@ const routes = [
   { path: '/projeler-ve-referanslar/kapidag2', name: 'project-kapidag2', component: ProjectKapidag2Page },
   { path: '/projeler-ve-referanslar/gelibolu', name: 'project-gelibolu', component: ProjectGelibolouPage },
   { path: '/projeler-ve-referanslar/biga', name: 'project-biga', component: ProjectBigaPage },
+  { path: '/projeler-ve-referanslar/kinik', name: 'project-kinik', component: ProjectKinikPage },
+  { path: '/projeler-ve-referanslar/asagikepen', name: 'project-asagikepen', component: ProjectAsagikepenPage },
+  { path: '/projeler-ve-referanslar/koltan', name: 'project-koltan', component: ProjectKoltanPage },
   { path: '/cookie-policy', name: 'cookie-policy', component: CookiePolicyPage },
   { path: '/cookie-politikasi', redirect: '/cookie-policy' },
   { path: '/:pathMatch(.*)*', redirect: '/' }
@@ -89,7 +95,11 @@ const router = createRouter({
   routes,
   scrollBehavior(to) {
     if (to.hash) {
-      return { el: to.hash, behavior: 'smooth' }
+      return new Promise((resolve) => {
+        window.setTimeout(() => {
+          resolve({ el: to.hash, behavior: 'smooth', top: 96 })
+        }, 0)
+      })
     }
     return { top: 0 }
   }

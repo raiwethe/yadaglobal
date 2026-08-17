@@ -152,6 +152,36 @@ const projects = [
     category: 'urban'
   },
   {
+    slug: 'kinik',
+    route: '/projeler-ve-referanslar/kinik',
+    badge: { tr: 'GES PLANLAMA', en: 'SPP PLANNING' },
+    title: { tr: 'Kınık GES İmar Planı', en: 'Kınık Solar Power Plant Zoning Plan' },
+    description: { tr: 'Mekânsal Planlama ve Teknik Danışmanlık', en: 'Spatial Planning and Technical Consulting' },
+    location: { tr: 'Sivrihisar, Eskişehir, Türkiye', en: 'Sivrihisar, Eskişehir, Türkiye' },
+    image: '/images/references/kinik.png',
+    category: 'urban'
+  },
+  {
+    slug: 'asagikepen',
+    route: '/projeler-ve-referanslar/asagikepen',
+    badge: { tr: 'GES PLANLAMA', en: 'SPP PLANNING' },
+    title: { tr: 'Aşağıkepen GES İmar Planı', en: 'Aşağıkepen Solar Power Plant Zoning Plan' },
+    description: { tr: 'Mekânsal Planlama ve Teknik Danışmanlık', en: 'Spatial Planning and Technical Consulting' },
+    location: { tr: 'Sivrihisar, Eskişehir, Türkiye', en: 'Sivrihisar, Eskişehir, Türkiye' },
+    image: '/images/references/asagikepen.png',
+    category: 'urban'
+  },
+  {
+    slug: 'koltan',
+    route: '/projeler-ve-referanslar/koltan',
+    badge: { tr: 'GES PLANLAMA', en: 'SPP PLANNING' },
+    title: { tr: 'Koltan GES İmar Planı', en: 'Koltan Solar Power Plant Zoning Plan' },
+    description: { tr: 'Mekânsal Planlama ve Teknik Danışmanlık', en: 'Spatial Planning and Technical Consulting' },
+    location: { tr: 'Sivrihisar, Eskişehir, Türkiye', en: 'Sivrihisar, Eskişehir, Türkiye' },
+    image: '/images/references/koltan.png',
+    category: 'urban'
+  },
+  {
     slug: 'storyland',
     route: '/projeler-ve-referanslar/storyland',
     badge: { tr: 'ERASMUS+', en: 'ERASMUS+' },
