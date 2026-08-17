@@ -1,7 +1,9 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, watchEffect } from 'vue'
+import { useRoute } from 'vue-router'
 import { translate } from '../i18n.js'
 
+const route = useRoute()
 const selectedAboutSection = ref('profile')
 
 const aboutTabs = [
@@ -13,41 +15,41 @@ const aboutTabs = [
 const heroCards = [
   {
     titleKeys: ['hero.card1.0', 'hero.card1.1', 'hero.card1.2'],
-    image: '/images/digital-technologies-software-solutions.png',
+    image: '/images/digital-technologies-software-solutions.webp',
     link: '/digital-teknolojiler-ve-yazilim-cozumleri'
   },
   {
     titleKeys: ['hero.card2.0', 'hero.card2.1', 'hero.card2.2'],
-    image: '/images/smart-cities-and-sustainable-urbanism.png',
+    image: '/images/smart-cities-and-sustainable-urbanism.webp',
     link: '/akilli-kentler-ve-surdurulebilir-sehircilik'
   },
   {
     titleKeys: ['hero.card3.0', 'hero.card3.1', 'hero.card3.2'],
-    image: '/images/international-projects-and-strategic-finance.png',
+    image: '/images/international-projects-and-strategic-finance.webp',
     link: '/uluslararasi-projeler-ve-stratejik-finansman'
   }
 ]
 
 const sectionImage = computed(() => {
   if (selectedAboutSection.value === 'approach') {
-    return '/images/approach.png'
+    return '/images/approach.webp'
   }
 
   if (selectedAboutSection.value === 'policies') {
-    return '/images/values.png'
+    return '/images/values.webp'
   }
 
-  return '/images/company.png'
+  return '/images/company.webp'
 })
 
 const expertiseItems = [
-  { image: 'geographic-information-systems-gis.png', labelKey: 'expertise.gis' },
-  { image: 'software-development.png', labelKey: 'expertise.software' },
-  { image: 'artificial-intelligence-solutions.png', labelKey: 'expertise.ai' },
-  { image: 'cybersecurity-solutions.png', labelKey: 'expertise.cybersecurity' },
-  { image: 'smart-city-technologies.png', labelKey: 'expertise.smartCity' },
-  { image: 'sustainable-planning.png', labelKey: 'expertise.sustainablePlanning' },
-  { image: 'international-project-development.png', labelKey: 'expertise.internationalProjects' }
+  { image: 'geographic-information-systems-gis.webp', labelKey: 'expertise.gis' },
+  { image: 'software-development.webp', labelKey: 'expertise.software' },
+  { image: 'artificial-intelligence-solutions.webp', labelKey: 'expertise.ai' },
+  { image: 'cybersecurity-solutions.webp', labelKey: 'expertise.cybersecurity' },
+  { image: 'smart-city-technologies.webp', labelKey: 'expertise.smartCity' },
+  { image: 'sustainable-planning.webp', labelKey: 'expertise.sustainablePlanning' },
+  { image: 'international-project-development.webp', labelKey: 'expertise.internationalProjects' }
 ]
 
 const complianceSections = [
@@ -134,6 +136,11 @@ const complianceSections = [
 const selectAboutSection = (key) => {
   selectedAboutSection.value = key
 }
+
+watchEffect(() => {
+  const section = route.query.about
+  if (aboutTabs.some((tab) => tab.key === section)) selectedAboutSection.value = section
+})
 </script>
 
 <template>
@@ -281,6 +288,10 @@ const selectAboutSection = (key) => {
             <div class="approach-visuals">
               <div class="approach-visual-card approach-visual-card--large" :style="{ backgroundImage: `url(${sectionImage})` }"></div>
               <p class="approach-banner-text" v-html="translate('approachPage.banner')"></p>
+              <section class="approach-sdg" :aria-label="translate('approachPage.sdg')">
+                <p v-html="translate('approachPage.sdg')"></p>
+                <img src="/images/sdg.webp" alt="" class="approach-sdg-image" />
+              </section>
             </div>
           </template>
           <template v-else>

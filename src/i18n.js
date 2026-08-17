@@ -138,7 +138,8 @@ const messages = {
           description: 'We believe success should be measured not only by completed projects, but by their long-term impact. For this reason, we prioritize solutions that are economically, environmentally and socially sustainable.'
         }
       ],
-      banner: 'For Yada Global, consultancy is not only about sharing knowledge; it is about developing <strong>technology-enabled, practical and lasting solutions</strong> and becoming a trusted partner in institutions\' transformation journey.'
+      banner: 'For Yada Global, consultancy is not only about sharing knowledge; it is about developing <strong>technology-enabled, practical and lasting solutions</strong> and becoming a trusted partner in institutions\' transformation journey.',
+      sdg: 'We shape all our work in line with the <strong>United Nations Sustainable Development Goals (SDGs)</strong>, with the aim of creating environmental, social, and economic value.'
     },
     policiesPage: {
       label: 'Corporate Governance & Compliance',
@@ -396,7 +397,8 @@ const messages = {
           description: 'Başarının yalnızca tamamlanan projelerle değil, oluşturduğu uzun vadeli etkiyle ölçüldüğüne inanıyoruz. Bu nedenle geliştirdiğimiz her çözümün ekonomik, çevresel ve sosyal açıdan sürdürülebilir olmasına öncelik veriyoruz.'
         }
       ],
-      banner: 'Yada Global için danışmanlık; yalnızca bilgi paylaşmak değil, <strong>teknolojiyle güçlendirilmiş, uygulanabilir ve kalıcı çözümler</strong> geliştirerek kurumların dönüşüm yolculuğunda güvenilir bir iş ortağı olmaktır.'
+      banner: 'Yada Global için danışmanlık; yalnızca bilgi paylaşmak değil, <strong>teknolojiyle güçlendirilmiş, uygulanabilir ve kalıcı çözümler</strong> geliştirerek kurumların dönüşüm yolculuğunda güvenilir bir iş ortağı olmaktır.',
+      sdg: 'Tüm çalışmalarımızı <strong>Birleşmiş Milletler Sürdürülebilir Kalkınma Amaçları (SKA)</strong> doğrultusunda, çevresel, sosyal ve ekonomik değer yaratma hedefiyle şekillendiriyoruz.'
     }
   }
 }

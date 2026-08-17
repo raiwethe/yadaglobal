@@ -289,6 +289,7 @@ const searchIndex = computed(() => {
   if (locale.value === 'tr') {
     return [
       { title: 'Hizmetlerimiz', subtitle: 'Hizmet sayfası', to: '/services', keywords: ['hizmet', 'servis'] },
+      { title: 'Yaklaşımımız ve Sürdürülebilir Kalkınma Amaçları', subtitle: 'Ana sayfa › Yaklaşımımız', to: '/', query: { about: 'approach' }, content: 'Tüm çalışmalarımızı Birleşmiş Milletler Sürdürülebilir Kalkınma Amaçları (SKA) doğrultusunda, çevresel, sosyal ve ekonomik değer yaratma hedefiyle şekillendiriyoruz.', keywords: ['yaklaşım', 'ska', 'sürdürülebilir kalkınma amaçları', 'birleşmiş milletler', 'çevresel', 'sosyal', 'ekonomik değer', 'sürdürülebilirlik'] },
       { title: 'İletişim', subtitle: 'İletişim sayfası', to: '/contact', keywords: ['telefon', 'adres', 'email', 'faks', 'harita'] },
       ...serviceSearchItems.tr,
       { title: 'Kişisel Verilerin Korunması ve Gizlilik Politikası', subtitle: 'Kurumsal politika', href: '/YadaGlobal_Kisisel_Verilerin_Korunmasi_ve_Gizlilik_Politikasi_v1.0.pdf', keywords: ['kvkk', 'kişisel veri', 'gizlilik', 'politika'] },
@@ -303,6 +304,7 @@ const searchIndex = computed(() => {
 
   return [
     { title: 'Services', subtitle: 'Service hub', to: '/services', keywords: ['service'] },
+    { title: 'Our Approach and Sustainable Development Goals', subtitle: 'Homepage › Our Approach', to: '/', query: { about: 'approach' }, content: 'We shape all our work in line with the United Nations Sustainable Development Goals (SDGs), with the aim of creating environmental, social, and economic value.', keywords: ['approach', 'sdg', 'sdgs', 'sustainable development goals', 'united nations', 'environmental', 'social', 'economic value', 'sustainability'] },
     { title: 'Contact', subtitle: 'Contact page', to: '/contact', keywords: ['phone', 'address', 'email', 'fax', 'map'] },
     ...serviceSearchItems.en,
     { title: 'Personal Data Protection and Privacy Policy', subtitle: 'Corporate policy', href: '/YadaGlobal_Personal_Data_Protection_and_Privacy_Policy_v1.0.pdf', keywords: ['personal data', 'privacy', 'data protection', 'policy'] },
@@ -500,7 +502,7 @@ const handleSearchSelect = (item) => {
     closeSearch()
     return
   }
-  router.push(item.tab ? { path: item.to, query: { tab: item.tab } } : item.to)
+  router.push(item.tab || item.query ? { path: item.to, query: item.query ?? { tab: item.tab } } : item.to)
   closeSearch()
 }
 
@@ -642,7 +644,7 @@ onBeforeUnmount(() => {
             {{ translate('nav.services') }}
             <span aria-hidden="true">▾</span>
           </router-link>
-          <button type="button" class="nav-link nav-link-dropdown mobile-services-toggle" :aria-expanded="mobileServicesOpen" @click.stop="mobileServicesOpen = !mobileServicesOpen">
+          <button v-if="mobileMenuOpen" type="button" class="nav-link nav-link-dropdown mobile-services-toggle" :aria-expanded="mobileServicesOpen" @click.stop="mobileServicesOpen = !mobileServicesOpen">
             {{ translate('nav.services') }}
             <span aria-hidden="true">▾</span>
           </button>

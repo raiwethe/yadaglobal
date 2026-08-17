@@ -92,7 +92,7 @@ const contactContent = computed(() => {
         <p>{{ contactContent.intro }}</p>
         <router-link to="/services" class="route-page-link services-link-bold">{{ contactContent.servicesLabel }}</router-link>
       </div>
-      <img src="/images/iletisim.png" alt="" class="contact-hero-visual" aria-hidden="true" />
+      <img src="/images/iletisim.webp" alt="" class="contact-hero-visual" aria-hidden="true" />
     </header>
 
     <section class="contact-info-grid">

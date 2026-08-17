@@ -55,19 +55,19 @@ const pageContent = {
             title: 'Uluslararası Konsorsiyum Yönetimi ve AB Hibe Süreçleri Danışmanlığı',
             text: 'Avrupa Komisyonu ve ilişkili fon otoriteleri tarafından yayımlanan çok uluslu çağrıları yakından takip ederek kurumunuza en uygun fonlama stratejilerini kurguluyoruz. Consortium Building yetkinliğimizle Horizon Europe, DUT, CoVE, LIFE ve Eurostars projeleri için sınır ötesi konsorsiyumlar oluşturuyor; çağrı analizi, başvuru stratejisi, idari-mali danışmanlık ve nihai raporlama aşamalarını AB standartlarında yönetiyoruz.',
             visual: 'AB Konsorsiyum',
-            image: '/images/international-consortium-management-eu-grants.png'
+            image: '/images/international-consortium-management-eu-grants.webp'
           },
           {
             title: 'Erasmus+ KA2 Stratejik Ortaklıklar ve Proje Süreç Yönetimi',
             text: 'Eğitim, gençlik, kentsel farkındalık ve kurumsal kapasite geliştirme alanlarında uluslararası işbirliklerini tetikleyen Erasmus+ KA2 stratejik ortaklık projelerinde kurumların doğru konsorsiyumlara dahil olması ve süreçlerin koordinasyonu için danışmanlık sunuyoruz. Uluslararası ortaklık toplantıları ve LTT faaliyetlerinin lojistik, idari ve teknik planlamasını Avrupa Komisyonu normlarına uyumlu şekilde yönetiyoruz.',
             visual: 'Erasmus+ KA2',
-            image: '/images/erasmus-ka2-strategic-partnerships.png'
+            image: '/images/erasmus-ka2-strategic-partnerships.webp'
           },
           {
             title: 'Dijital İş Paketi Liderliği, Uygulama Geliştirme ve Oyunlaştırma',
             text: 'Dahil olduğumuz AB projelerinde yalnızca süreç danışmanlığı değil, resmi proje ortağı olarak doğrudan teknik çıktı sorumluluğu üstleniyoruz. Yaygınlaştırma stratejilerine uygun web platformları ve e-öğrenme platformları kuruyor; Erasmus+ ve CoVE projeleri için çok dilli, SCORM uyumlu LMS altyapıları geliştiriyoruz. Senaryo tabanlı oyunlaştırma kurguları, dijital eğitim içerikleri ve projeye özel mobil/web uygulama geliştirme faaliyetleriyle dijital iş paketlerini uçtan uca üretiyoruz.',
             visual: 'Dijital İş Paketleri',
-            image: '/images/digital-work-package-software-development.png'
+            image: '/images/digital-work-package-software-development.webp'
           }
         ]
       },
@@ -86,20 +86,20 @@ const pageContent = {
             title: 'Teknik Şartname Analizleri ve Teklif Stratejisi',
             text: 'Uluslararası kuruluşların yayımladığı çok uluslu ihale dosyalarını, idari ve teknik şartnameleri derinlemesine analiz ediyoruz. Kurumunuzun küresel pazardaki ihale süreçlerine uyumunu güçlendirmek için risk analizleri, maliyet projeksiyonları, yerel mevzuat uyumluluk denetimleri ve joint venture modellerini içeren teknik ve finansal teklif stratejileri geliştiriyoruz.',
             visual: 'Teklif Stratejisi',
-            image: '/images/technical-tender-analysis-bid-management.png'
+            image: '/images/technical-tender-analysis-bid-management.webp'
           },
           {
             title: 'Çok Taraflı Kalkınma Bankaları ve Küresel Ajansların İhale Yönetimi',
             text: 'Dünya Bankası, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France ve GTAI gibi kuruluşların procurement prosedürlerine tam uyumlu süreç yönetimi sağlıyoruz. Talep ettiğiniz sektördeki ihaleleri izleyerek firmaların ve konsorsiyumların uluslararası alımlara eksiksiz dosyalar sunmasını koordine ediyoruz.',
             institutions: internationalInstitutions,
             visual: 'Küresel İhale',
-            image: '/images/multilateral-development-bank-procurement.png'
+            image: '/images/multilateral-development-bank-procurement.webp'
           },
           {
             title: 'Teknik Teklif Geliştirme ve Uluslararası Dokümantasyon Yönetimi',
             text: 'Uluslararası ihale metodolojilerine uygun technical proposal ve iş planı metinleri geliştiriyoruz. Teknik uzman özgeçmişlerinin düzenlenmesi, kurumsal referansların uluslararası formatlara uyarlanması, mali teklif şablonlarının optimizasyonu ve evaluation criteria ile tam uyumlu dokümantasyon setlerinin hazırlanması süreçlerini titizlikle yürütüyoruz.',
             visual: 'Teklif Dokümanı',
-            image: '/images/technical-proposal-international-tender-documentation.png'
+            image: '/images/technical-proposal-international-tender-documentation.webp'
           }
         ]
       },
@@ -118,19 +118,19 @@ const pageContent = {
             title: 'Makro Proje Finansmanı ve Uluslararası Uzun Vadeli Kredi Yönetimi',
             text: 'Belediyelerin, OSBlerin ve özel sektör yatırımcılarının büyük ölçekli altyapı, akıllı kent ve dijital dönüşüm projeleri için çok taraflı kalkınma bankalarından uzun vadeli kredi sağlama süreçlerine danışmanlık yapıyoruz. Finansman kuruluşlarının katı başvuru prosedürlerine uyumlu borçlanma stratejileri kurguluyor ve fonlama öncesi kurumsal risk analizleri gerçekleştiriyoruz.',
             visual: 'Proje Finansmanı',
-            image: '/images/macro-project-finance-long-term-loans.png'
+            image: '/images/macro-project-finance-long-term-loans.webp'
           },
           {
             title: 'Ticari, Teknik Fizibilite Raporları ve Finansal Modelleme',
             text: 'Uluslararası finans kuruluşlarının ve bölgesel kalkınma ajanslarının kabul standartlarına uyumlu ticari ve teknik fizibilite raporları hazırlıyoruz. Yatırımların geri dönüş sürelerini, net bugünkü değerlerini ve iç verimlilik oranlarını hesaplayan dinamik finansal modelleme ve risk analizi tablolarıyla projelerin finansal sürdürülebilirliğini belgeliyoruz.',
             visual: 'Finansal Model',
-            image: '/images/commercial-technical-feasibility-financial-modeling.png'
+            image: '/images/commercial-technical-feasibility-financial-modeling.webp'
           },
           {
             title: 'Yeşil Finansman, Sürdürülebilirlik Yönetimi ve Yatırım Rehberliği',
             text: 'Avrupa Yeşil Mutabakatı normlarıyla uyumlu yatırımlar için yeşil finansman, yeşil tahvil ve sürdürülebilirlik odaklı fon mekanizmalarına erişim stratejileri geliştiriyoruz. Yatırımcıların iklim ve çevre düzenlemelerine uyumunu koordine ederek çevresel, sosyal ve yönetişim (ESG) kriterlerine uygun yatırım rehberliği sunuyoruz.',
             visual: 'Yeşil Finansman',
-            image: '/images/green-finance-sustainable-investment-esg.png'
+            image: '/images/green-finance-sustainable-investment-esg.webp'
           }
         ]
       }
@@ -157,19 +157,19 @@ const pageContent = {
             title: 'International Consortium Management and EU Grant Advisory',
             text: 'We closely monitor multinational calls published by the European Commission and related authorities, then design funding strategies tailored to your institution. With strong consortium building capability, we lead cross-border structures for Horizon Europe, DUT, CoVE, LIFE, and Eurostars, while managing call analysis, application strategy, administrative-financial alignment, and final reporting to EU standards.',
             visual: 'EU Consortium',
-            image: '/images/international-consortium-management-eu-grants.png'
+            image: '/images/international-consortium-management-eu-grants.webp'
           },
           {
             title: 'Erasmus+ KA2 Strategic Partnerships and Process Management',
             text: 'We support institutions in joining the right consortia and coordinating Erasmus+ KA2 strategic partnership projects across education, youth, urban awareness, and institutional capacity development. We plan transnational meetings and LTT activities, and ensure administrative and financial workflows are executed in full compliance with European Commission norms.',
             visual: 'Erasmus+ KA2',
-            image: '/images/erasmus-ka2-strategic-partnerships.png'
+            image: '/images/erasmus-ka2-strategic-partnerships.webp'
           },
           {
             title: 'Digital Work Package Leadership, Application Development, and Gamification',
             text: 'In the EU projects we participate in, we take on direct responsibility for technical outputs as official project partners, rather than providing process consultancy alone. We develop web platforms and e-learning platforms aligned with dissemination strategies, as well as multilingual, SCORM-compliant LMS infrastructures for Erasmus+ and CoVE projects. Through scenario-based gamification, digital learning content, and project-specific mobile/web application development, we deliver digital work packages from end to end.',
             visual: 'Digital Work Packages',
-            image: '/images/digital-work-package-software-development.png'
+            image: '/images/digital-work-package-software-development.webp'
           }
         ]
       },
@@ -188,20 +188,20 @@ const pageContent = {
             title: 'Technical Specification Analysis and Bid Strategy',
             text: 'We analyze multinational tender files and technical-administrative specifications in depth. To strengthen your competitiveness in global procurement, we design technical and financial bid strategies covering risk analysis, cost projections, local compliance reviews, and joint venture model structuring.',
             visual: 'Bid Strategy',
-            image: '/images/technical-tender-analysis-bid-management.png'
+            image: '/images/technical-tender-analysis-bid-management.webp'
           },
           {
             title: 'Tender Management for Multilateral Banks and Global Agencies',
             text: 'We ensure process execution in full alignment with procurement guidelines of institutions such as the World Bank, UNDP, EBRD, EIB, ICMPD, IsDB, GIZ, Expertise France, and GTAI. By monitoring tenders in your sector of interest, we coordinate the submission of complete bid packages by companies and consortia for international procurement processes.',
             institutions: internationalInstitutionsEn,
             visual: 'Global Tendering',
-            image: '/images/multilateral-development-bank-procurement.png'
+            image: '/images/multilateral-development-bank-procurement.webp'
           },
           {
             title: 'Technical Proposal Development and International Documentation Management',
             text: 'We prepare technical proposal narratives and work plans in line with international tender methodologies. Our delivery includes expert CV formatting, adaptation of institutional track records to global formats, financial template optimization, and complete documentation sets aligned with the contracting authority evaluation criteria.',
             visual: 'Proposal Development',
-            image: '/images/technical-proposal-international-tender-documentation.png'
+            image: '/images/technical-proposal-international-tender-documentation.webp'
           }
         ]
       },
@@ -220,19 +220,19 @@ const pageContent = {
             title: 'Macro Project Finance and International Long-Term Credit Management',
             text: 'We advise municipalities, organized industrial zones, and private investors on obtaining long-term financing from multilateral development banks and global funds for large infrastructure, smart city, and digital transformation investments. We design borrowing strategies compatible with strict lender requirements and conduct institutional risk analysis before funding rounds.',
             visual: 'Project Finance',
-            image: '/images/macro-project-finance-long-term-loans.png'
+            image: '/images/macro-project-finance-long-term-loans.webp'
           },
           {
             title: 'Commercial and Technical Feasibility Reports and Financial Modeling',
             text: 'We produce commercial and technical feasibility studies aligned with acceptance standards of international financial institutions and regional development agencies. Through dynamic modeling and risk analytics that calculate ROI, NPV, and IRR, we document the financial sustainability of investment programs to global standards.',
             visual: 'Financial Modeling',
-            image: '/images/commercial-technical-feasibility-financial-modeling.png'
+            image: '/images/commercial-technical-feasibility-financial-modeling.webp'
           },
           {
             title: 'Green Finance, Sustainability Management, and Investment Guidance',
             text: 'For investments aligned with the European Green Deal, we design access strategies for green finance instruments, green bonds, and sustainability-focused funds. We coordinate climate and environmental compliance while guiding investors toward ESG-compatible funding criteria and long-term value positioning.',
             visual: 'Green Finance',
-            image: '/images/green-finance-sustainable-investment-esg.png'
+            image: '/images/green-finance-sustainable-investment-esg.webp'
           }
         ]
       }
@@ -261,9 +261,10 @@ const getBlockVisualStyle = (block) => {
 
   return {
     backgroundImage: `linear-gradient(140deg, rgba(11, 47, 119, 0.28), rgba(15, 143, 152, 0.18)), url(${block.image})`,
-    backgroundSize: 'cover',
+    backgroundSize: 'cover, cover',
     backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat'
+    backgroundRepeat: 'no-repeat',
+    backgroundColor: '#f8fbff'
   }
 }
 </script>
@@ -278,7 +279,7 @@ const getBlockVisualStyle = (block) => {
         <p>{{ localizedContent.description }}</p>
       </div>
       <div class="digital-tech-hero-img-wrap" aria-hidden="true">
-        <img src="/images/internationalbanner.png" alt="" class="digital-tech-hero-img" />
+        <img src="/images/internationalbanner.webp" alt="" class="digital-tech-hero-img" />
       </div>
     </header>
 

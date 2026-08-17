@@ -88,7 +88,7 @@ const c = computed(() => content[locale.value] ?? content.en)
       <div class="project-detail-main">
         <div
           class="project-detail-hero"
-          :style="{ backgroundImage: 'url(/images/references/s-feds.png)' }"
+          :style="{ backgroundImage: 'url(/images/references/s-feds.webp)' }"
         >
           <div class="project-detail-hero-gradient"></div>
           <div class="project-detail-hero-content">

@@ -58,7 +58,7 @@ const projects = [
     title: { tr: 'SHORE', en: 'SHORE' },
     description: { tr: 'Çevre Bilinci ve Eylemi için Okyanus Okuryazarlığı', en: 'Ocean Literacy for Environmental Awareness and Action' },
     location: { tr: 'AB Projesi, 9 Ülke', en: 'EU Project, 9 Countries' },
-    image: '/images/references/shore.png',
+    image: '/images/references/shore.webp',
     category: 'international'
   },
   {
@@ -68,7 +68,7 @@ const projects = [
     title: { tr: 'Cizre Tarih, Kültür,İnanç Turizm Rotalarının Oluşturulması', en: 'Creating Historical, Cultural, and Faith Tourism Routes in Cizre' },
     description: { tr: 'Turizm Master Planı', en: 'Tourism Master Plan' },
     location: { tr: 'Cizre, Şırnak, Türkiye', en: 'Cizre, Şırnak, Turkey' },
-    image: '/images/references/cizre.png',
+    image: '/images/references/cizre.webp',
     category: 'urban'
   },
   {
@@ -78,7 +78,7 @@ const projects = [
     title: { tr: 'Şiran Kuzey–Güney Koridoru Yaratıcı Turizm Konsept Master Planı', en: 'Şiran North–South Corridor Creative Tourism Concept Master Plan' },
     description: { tr: 'Turizm Master Planı', en: 'Tourism Master Plan' },
     location: { tr: 'Şiran, Gümüşhane, Türkiye', en: 'Şiran, Gümüşhane, Türkiye' },
-    image: '/images/references/siran1.png',
+    image: '/images/references/siran1.webp',
     category: 'urban'
   },
   {
@@ -88,7 +88,7 @@ const projects = [
     title: { tr: 'Şiran Kuzey Güney Koridoru Yaratıcı Turizm Konsept Master Planı Modelleme ve Tahmini Maliyet', en: 'Şiran North–South Corridor Creative Tourism Concept Master Plan Modeling and Estimated Cost' },
     description: { tr: 'Modelleme ve Tahmini Maliyet', en: 'Modeling and Estimated Cost' },
     location: { tr: 'Şiran, Gümüşhane, Türkiye', en: 'Şiran, Gümüşhane, Türkiye' },
-    image: '/images/references/siran2.png',
+    image: '/images/references/siran2.webp',
     category: 'urban'
   },
   {
@@ -98,7 +98,7 @@ const projects = [
     title: { tr: 'Artabel Gölleri Tabiat Parkı Yaratıcı Turizm Konsept Master Planı', en: 'Artabel Lakes Nature Park Creative Tourism Concept Master Plan' },
     description: { tr: 'Turizm Master Planı', en: 'Tourism Master Plan' },
     location: { tr: 'Torul, Gümüşhane, Türkiye', en: 'Torul, Gümüşhane, Türkiye' },
-    image: '/images/references/artabel-golleri.png',
+    image: '/images/references/artabel-golleri.webp',
     category: 'urban'
   },
   {
@@ -108,7 +108,7 @@ const projects = [
     title: { tr: 'Sürmene Yeniçam Tersane Alanı Gelişim ve İyileştirme Çalışması', en: 'Sürmene Yeniçam Shipyard Area Development and Improvement Study' },
     description: { tr: 'OSB Geliştirme', en: 'OIZ Development' },
     location: { tr: 'Sürmene, Trabzon, Türkiye', en: 'Sürmene, Trabzon, Türkiye' },
-    image: '/images/references/surmene.png',
+    image: '/images/references/surmene.webp',
     category: 'urban'
   },
   {
@@ -118,7 +118,7 @@ const projects = [
     title: { tr: 'Kapıdağ Yarımadası Tematik Planlama, Bağlamsal Tasarım ve Vizyon Oluşturma Projesi', en: 'Kapıdağ Peninsula Thematic Planning, Contextual Design and Vision Creation Project' },
     description: { tr: 'Tematik Planlama', en: 'Thematic Planning' },
     location: { tr: 'Erdek, Balıkesir, Türkiye', en: 'Erdek, Balıkesir, Türkiye' },
-    image: '/images/references/kapidag.png',
+    image: '/images/references/kapidag.webp',
     category: 'urban'
   },
   {
@@ -128,7 +128,7 @@ const projects = [
     title: { tr: 'Kapıdağ Yarımadası Yaratıcı Turizm Konsept Planları', en: 'Kapıdağ Peninsula Creative Tourism Concept Plans' },
     description: { tr: 'Turizm Master Planı', en: 'Tourism Master Plan' },
     location: { tr: 'Erdek, Balıkesir, Türkiye', en: 'Erdek, Balıkesir, Türkiye' },
-    image: '/images/references/kapidag2.png',
+    image: '/images/references/kapidag2.webp',
     category: 'urban'
   },
   {
@@ -138,7 +138,7 @@ const projects = [
     title: { tr: 'Gelibolu Merkezi Yaratıcı Turizm Konsept Planları', en: 'Gelibolu Center Creative Tourism Concept Plans' },
     description: { tr: 'Turizm Master Planı', en: 'Tourism Master Plan' },
     location: { tr: 'Gelibolu, Çanakkale, Türkiye', en: 'Gelibolu, Çanakkale, Türkiye' },
-    image: '/images/references/gelibolu.png',
+    image: '/images/references/gelibolu.webp',
     category: 'urban'
   },
   {
@@ -148,7 +148,7 @@ const projects = [
     title: { tr: 'Biga Ramazanlar GES Planlama', en: 'Biga Ramazanlar SPP Planning' },
     description: { tr: 'Mekânsal Planlama ve Teknik Danışmanlık', en: 'Spatial Planning and Technical Consulting' },
     location: { tr: 'Biga, Çanakkale, Türkiye', en: 'Biga, Çanakkale, Türkiye' },
-    image: '/images/references/biga.png',
+    image: '/images/references/biga.webp',
     category: 'urban'
   },
   {
@@ -158,7 +158,7 @@ const projects = [
     title: { tr: 'Kınık GES İmar Planı', en: 'Kınık Solar Power Plant Zoning Plan' },
     description: { tr: 'Mekânsal Planlama ve Teknik Danışmanlık', en: 'Spatial Planning and Technical Consulting' },
     location: { tr: 'Sivrihisar, Eskişehir, Türkiye', en: 'Sivrihisar, Eskişehir, Türkiye' },
-    image: '/images/references/kinik.png',
+    image: '/images/references/kinik.webp',
     category: 'urban'
   },
   {
@@ -168,7 +168,7 @@ const projects = [
     title: { tr: 'Aşağıkepen GES İmar Planı', en: 'Aşağıkepen Solar Power Plant Zoning Plan' },
     description: { tr: 'Mekânsal Planlama ve Teknik Danışmanlık', en: 'Spatial Planning and Technical Consulting' },
     location: { tr: 'Sivrihisar, Eskişehir, Türkiye', en: 'Sivrihisar, Eskişehir, Türkiye' },
-    image: '/images/references/asagikepen.png',
+    image: '/images/references/asagikepen.webp',
     category: 'urban'
   },
   {
@@ -178,7 +178,7 @@ const projects = [
     title: { tr: 'Koltan GES İmar Planı', en: 'Koltan Solar Power Plant Zoning Plan' },
     description: { tr: 'Mekânsal Planlama ve Teknik Danışmanlık', en: 'Spatial Planning and Technical Consulting' },
     location: { tr: 'Sivrihisar, Eskişehir, Türkiye', en: 'Sivrihisar, Eskişehir, Türkiye' },
-    image: '/images/references/koltan.png',
+    image: '/images/references/koltan.webp',
     category: 'urban'
   },
   {
@@ -188,7 +188,7 @@ const projects = [
     title: { tr: 'Storyland', en: 'Storyland' },
     description: { tr: 'Yetişkinler İçin Yeni E-Sanatsal İngilizce Öğrenme Yaklaşımı', en: 'New e-Artistic English Learning Approach for Adults' },
     location: { tr: 'AB Projesi, 4 Ülke', en: 'EU Project, 4 Countries' },
-    image: '/images/references/storyland.png',
+    image: '/images/references/storyland.webp',
     category: 'international'
   },
   {
@@ -198,7 +198,7 @@ const projects = [
     title: { tr: 'E-MAKERS', en: 'E-MAKERS' },
     description: { tr: "Yaratıcı Dil Öğrenimi için Dijital Hikaye Anlatımı", en: 'Digital Storytelling for Creative Language Learning' },
     location: { tr: 'AB Projesi, 4 Ülke', en: 'EU Project, 4 Countries' },
-    image: '/images/references/emakers.png',
+    image: '/images/references/emakers.webp',
     category: 'international'
   },
   {
@@ -208,7 +208,7 @@ const projects = [
     title: { tr: 'S-FEDs', en: 'S-FEDs' },
     description: { tr: 'Daha Güçlü Aile Desteğiyle Kapsayıcı Sporlar', en: 'Inclusive Sports Through Stronger Family Support' },
     location: { tr: 'AB Projesi, 6 Ülke', en: 'EU Project, 6 Countries' },
-    image: '/images/references/s-feds.png',
+    image: '/images/references/s-feds.webp',
     category: 'international'
   },
   {
@@ -218,7 +218,7 @@ const projects = [
     title: { tr: 'Tarım Kooperatiflerinde Kadınların Güçlendirilmesi', en: 'Women Empowerment in Agricultural Cooperatives' },
     description: { tr: 'Sürdürülebilir Tarım Yoluyla Kadınların Güçlendirilmesi', en: 'Women Empowerment Through Sustainable Agriculture' },
     location: { tr: 'AB Projesi, 3 Ülke', en: 'EU Project, 3 Countries' },
-    image: '/images/references/women.png',
+    image: '/images/references/women.webp',
     category: 'international'
   },
   {
@@ -228,7 +228,7 @@ const projects = [
     title: { tr: 'DIGITRAINER 4.0', en: 'DIGITRAINER 4.0' },
     description: { tr: 'Eğitim 4.0 için Dijital Beceriler', en: 'Digital Skills for Education 4.0' },
     location: { tr: 'AB Projesi, 5 Ülke', en: 'EU Project, 5 Countries' },
-    image: '/images/references/digitrainer.png',
+    image: '/images/references/digitrainer.webp',
     category: 'international'
   },
    {
@@ -238,7 +238,7 @@ const projects = [
     title: { tr: 'SU', en: 'WATER' },
     description: { tr: 'Sürdürülebilir Bir Gelecek İçin Su Bilinci', en: 'Water Literacy for Sustainable Future' },
     location: { tr: 'AB Projesi, 6 Ülke', en: 'EU Project, 6 Countries' },
-    image: '/images/references/water.png',
+    image: '/images/references/water.webp',
     category: 'international'
   },
    {
@@ -248,7 +248,7 @@ const projects = [
     title: { tr: 'DİJİTAL PORTFÖY', en: 'DIGITAL PORTFOLIO' },
     description: { tr: 'Dijital Portföy Yönetim Hizmeti', en: 'Digital Portfolio Management Service' },
     location: { tr: 'Veri Analitiği', en: 'Data Analytics' },
-    image: '/images/references/digital.png',
+    image: '/images/references/digital.webp',
     category: 'digital'
   },
    {
@@ -258,7 +258,7 @@ const projects = [
     title: { tr: 'DİJİTAL İKİZ', en: 'DIGITAL TWIN' },
     description: { tr: 'Dijital İkiz Yönetim Hizmeti', en: 'Digital Twin Management Service' },
     location: { tr: 'Veri Analitiği', en: 'Data Analytics' },
-    image: '/images/references/digitaltwin.png',
+    image: '/images/references/digitaltwin.webp',
     category: 'digital'
   },
   
@@ -269,25 +269,25 @@ const institutionGroups = [
     key: 'international',
     title: { tr: '🌐 Uluslararası Kurumlar & Organizasyonlar', en: '🌐 International Institutions & Organizations' },
     folder: 'uluslararası',
-    logos: ['adb.png', 'ebrd.png', 'ec.png', 'ef.png', 'eib.png', 'erasmus.png', 'giz.png', 'gtai.png', 'horizon.png', 'icmpd.png', 'isdb.png', 'undp.png', 'ungm.png', 'world-bank.png']
+    logos: ['adb.webp', 'ebrd.webp', 'ec.webp', 'ef.webp', 'eib.webp', 'erasmus.webp', 'giz.webp', 'gtai.webp', 'horizon.webp', 'icmpd.webp', 'isdb.webp', 'undp.webp', 'ungm.webp', 'world-bank.webp']
   },
   {
     key: 'public',
     title: { tr: '🏛 Kamu Kurumları', en: '🏛 Public Institutions' },
     folder: 'kamu',
-    logos: ['ankara-buyuksehir.png', 'cankaya.png', 'cevre-bakanligi.png', 'cizre.png', 'dika.png', 'doka.png', 'erdek.png', 'gelibolu.png', 'giresun.png', 'gmka.png', 'ilbank.png', 'kara-yollari.png', 'meb.png', 'Ministry of Energy.png', 'portas.png', 'sanayi-bakanligi.png', 'silivri.png', 'siran.png', 'surmene.png', 'tarim-bakanligi.png', 'toki.png', 'torul.png', 'trabzon-buyuksehir.png', 'turizm-bakanligi.png', 'ulastirma-bakanligi.png', 'yildiz-teknik.png']
+    logos: ['ankara-buyuksehir.webp', 'cankaya.webp', 'cevre-bakanligi.webp', 'cizre.webp', 'dika.webp', 'doka.webp', 'erdek.webp', 'gelibolu.webp', 'giresun.webp', 'gmka.webp', 'ilbank.webp', 'kara-yollari.webp', 'meb.webp', 'ministry-energy.webp', 'portas.webp', 'sanayi-bakanligi.webp', 'silivri.webp', 'siran.webp', 'surmene.webp', 'tarim-bakanligi.webp', 'toki.webp', 'torul.webp', 'trabzon-buyuksehir.webp', 'turizm-bakanligi.webp', 'ulastirma-bakanligi.webp', 'yildiz-teknik.webp']
   },
   {
     key: 'civil',
     title: { tr: '🤝 Sivil Toplum & Mesleki Kuruluşlar', en: '🤝 Civil Society & Professional Organizations' },
     folder: 'siviltoplum',
-    logos: ['eurolinks.png', 'naturelder.png', 'sygd.png', 'tossfed.png', 'xul.png']
+    logos: ['eurolinks.webp', 'naturelder.webp', 'sygd.webp', 'tossfed.webp', 'xul.webp']
   },
   {
     key: 'private',
     title: { tr: '◈ Özel Sektör', en: '◈ Private Sector' },
     folder: 'ozel',
-    logos: ['acb.png', 'beogo.png', 'bodef.png', 'ecotech.png', 'eupro.png', 'mtg.png', 'rds.png', 'rs.png', 'schwerpunkt.png']
+    logos: ['acb.webp', 'beogo.webp', 'bodef.webp', 'ecotech.webp', 'eupro.webp', 'mtg.webp', 'rds.webp', 'rs.webp', 'schwerpunkt.webp']
   }
 ]
 
