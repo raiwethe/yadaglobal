@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 import { locale, translate, setLocale } from './i18n.js'
 
 const router = useRouter()
+const logoSrc = '/images/yadalogo.webp'
 const searchOpen = ref(false)
 const searchQuery = ref('')
 const langOpen = ref(false)
@@ -575,7 +576,7 @@ watchEffect(() => {
         '@type': 'Organization',
         name: 'Yada Global',
         url: window.location.origin,
-        logo: 'https://yadaglb.com/wp-content/uploads/2020/12/yada2-2.png',
+        logo: `${window.location.origin}${logoSrc}`,
         sameAs: [
           'https://www.linkedin.com/company/yadaglobal/',
           'https://www.instagram.com/yadaglobal/'
@@ -628,7 +629,7 @@ onBeforeUnmount(() => {
   <div class="app-shell">
     <header class="page-header" :class="{ 'is-scrolled': headerScrolled }">
       <router-link to="/" class="brand-logo">
-        <img src="https://yadaglb.com/wp-content/uploads/2020/12/yada2-2.png" alt="YADA GLOBAL" width="800" height="318" class="brand-logo-image" />
+        <img :src="logoSrc" alt="YADA GLOBAL" width="800" height="318" class="brand-logo-image" />
       </router-link>
 
       <button class="mobile-menu-toggle" type="button" :aria-expanded="mobileMenuOpen" aria-controls="main-navigation" aria-label="Toggle navigation" @click="setMobileMenu(!mobileMenuOpen)">
@@ -717,7 +718,7 @@ onBeforeUnmount(() => {
 
       <div class="site-footer-grid">
         <section class="footer-brand-col">
-          <img src="https://yadaglb.com/wp-content/uploads/2020/12/yada2-2.png" alt="YADA GLOBAL" width="800" height="318" class="footer-logo" />
+          <img :src="logoSrc" alt="YADA GLOBAL" width="800" height="318" class="footer-logo" />
           <p>{{ translate('contactPage.description') }}</p>
           <div class="footer-related-links">
             <router-link to="/services" class="footer-related-item">

@@ -268,7 +268,7 @@ const institutionGroups = [
   {
     key: 'international',
     title: { tr: '🌐 Uluslararası Kurumlar & Organizasyonlar', en: '🌐 International Institutions & Organizations' },
-    folder: 'uluslararası',
+    folder: 'uluslararasi',
     logos: ['adb.webp', 'ebrd.webp', 'ec.webp', 'ef.webp', 'eib.webp', 'erasmus.webp', 'giz.webp', 'gtai.webp', 'horizon.webp', 'icmpd.webp', 'isdb.webp', 'undp.webp', 'ungm.webp', 'world-bank.webp']
   },
   {
