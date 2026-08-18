@@ -629,7 +629,7 @@ onBeforeUnmount(() => {
   <div class="app-shell">
     <header class="page-header" :class="{ 'is-scrolled': headerScrolled }">
       <router-link to="/" class="brand-logo">
-        <img :src="logoSrc" alt="YADA GLOBAL" width="800" height="318" class="brand-logo-image" />
+        <img :src="logoSrc" alt="YADA GLOBAL" width="450" height="179" class="brand-logo-image" />
       </router-link>
 
       <button class="mobile-menu-toggle" type="button" :aria-expanded="mobileMenuOpen" aria-controls="main-navigation" aria-label="Toggle navigation" @click="setMobileMenu(!mobileMenuOpen)">
@@ -718,7 +718,7 @@ onBeforeUnmount(() => {
 
       <div class="site-footer-grid">
         <section class="footer-brand-col">
-          <img :src="logoSrc" alt="YADA GLOBAL" width="800" height="318" class="footer-logo" />
+          <img :src="logoSrc" alt="YADA GLOBAL" width="450" height="179" class="footer-logo" />
           <p>{{ translate('contactPage.description') }}</p>
           <div class="footer-related-links">
             <router-link to="/services" class="footer-related-item">
